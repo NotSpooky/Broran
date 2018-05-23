@@ -168,17 +168,17 @@ var botones = [
   , DatosBoton.new("c'ríro dobó̈n", "c riro dobon.png", "c riro dobon", Vector2(0.73, 0.1))
   ], [
   DatosBoton.new("böbrè̈n", "bobren.png", "bobren", Vector2(0.27, 0.4), Vector2(0.55, 0.55))
-  , DatosBoton.new("shúrín dobó̈n", "shurin dobon.png", "", Vector2(0.5, 0.4)) ## FALTA AUDIO
+  , DatosBoton.new("shúrín dobó̈n", "shurin dobon.png", "shurin dobon", Vector2(0.5, 0.4))
   , DatosBoton.new("dobó̈n täntá̈n/dobó̈n shricshrí", "dobon tantan.png", "dobon tantan", Vector2(0.1, 0.1))
-  , DatosBoton.new("shití", "shiti.png", "", Vector2(0.1, 0.7)) ## FALTA AUDIO AUNQUE ESTA SHITI COHUO
-  , DatosBoton.new("físcuo", "fiscuo.png", "", Vector2(0.7, 0.7)) ## FALTA AUDIO
-  , DatosBoton.new("shurí̈nh̲u̲a", "shurinhua.png", "", Vector2(0.7, 0.1)) ## FALTA AUDIO
+  , DatosBoton.new("shití", "shiti.png", "shiti", Vector2(0.1, 0.7))
+  , DatosBoton.new("físcuo", "fiscuo.png", "fiscuo", Vector2(0.7, 0.7))
+  , DatosBoton.new("shurí̈nh̲u̲a", "shurinhua.png", "shurinhua", Vector2(0.7, 0.1))
   ], [
-  DatosBoton.new("sögrá", "sogra.png", "", Vector2(0.3, 0.4)) ## FALTA AUDIO
-  , DatosBoton.new("cuomgrá/cuómcr̈en", "cuomgra.png", "", Vector2(0.5, 0.4)) ## FALTA AUDIO
+  DatosBoton.new("sögrá", "sogra.png", "sogra", Vector2(0.3, 0.4))
+  , DatosBoton.new("cuomgrá/cuómcr̈en", "cuomgra.png", "cuomgra", Vector2(0.5, 0.4)) ## Está el otro audio también
   # Hay 2 de este
   , DatosBoton.new("c'úrí", "c uri.png", "c uri", Vector2(0.1, 0.1))
-  , DatosBoton.new("nepcuógra", "nepcuogra.png", "", Vector2(0.1, 0.7), Vector2(0.45,0.45)) ## FALTA AUDIO
+  , DatosBoton.new("nepcuógra", "nepcuogra.png", "nepcuogra", Vector2(0.1, 0.7), Vector2(0.45,0.45))
   , DatosBoton.new("c'orcuó", "c orcuo.png", "c orcuo", Vector2(0.7, 0.7), Vector2(0.65, 0.65))
   , DatosBoton.new("zg̲óh̲u̲o", "zgohuo.png", "zgohuo", Vector2(0.7, 0.1), Vector2(0.75, 0.75))
   ], [
