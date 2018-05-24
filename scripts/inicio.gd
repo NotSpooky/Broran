@@ -43,10 +43,10 @@ var botones = [
   , DatosBoton.new("́romdó", "romdo.png", "romdo", Vector2(0.7, 0.1), Vector2(0.72, 0.72))
   , DatosBoton.new("m̲á", "ma.png", "ma", Vector2(0.7, 0.7), Vector2(0.8, 0.8))  ## FALTA AUDIO
   ], [
-  DatosBoton.new("shuóhuo", "shuohuo.png", "shuohuo", Vector2(0.26, 0.4), Vector2(0.7, 0.7))
-  , DatosBoton.new("zhír", "zhir.png", "zhir", Vector2(0.5, 0.4), Vector2(0.75, 0.75))
-  , DatosBoton.new("dióhuo", "diohuo.png", "diohuo", Vector2(0.1, 0.1), Vector2(0.85, 0.85))
-  , DatosBoton.new("́sró̈n", "sron.png", "sron", Vector2(0.1, 0.7), Vector2(0.65, 0.65))  ## FALTA AUDIO
+  DatosBoton.new("shuóhuo", "shuohuo.png", "shuohuo", Vector2(0.4, 0.4), Vector2(0.9, 0.9))
+  , DatosBoton.new("zhír", "zhir.png", "zhir", Vector2(0.7, 0.1), Vector2(0.9, 0.9))
+  , DatosBoton.new("dióhuo", "diohuo.png", "diohuo", Vector2(0.1, 0.1), Vector2(0.95, 0.95))
+  , DatosBoton.new("́sró̈n", "sron.png", "sron", Vector2(0.1, 0.7), Vector2(0.75, 0.75))  ## FALTA AUDIO
   # Repetido
   #, DatosBoton.new("bòmcuo", "bomcuo.png", "bomcuo", Vector2(0.7, 0.1), Vector2(0.65, 0.65))
   # Revisar si tiene otra tilde.
