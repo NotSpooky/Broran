@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=1]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends TextureButton
+
+var id = -1# Cuál elemento de los animales representa.
+
+func _pressed():
+	self.get_parent().seleccionarOpcion(id)"
+
+[node name="TextureButton" type="TextureButton"]
+
+anchor/left = 2
+anchor/right = 2
+anchor/bottom = 2
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.15
+margin/top = 250.0
+margin/right = 0.349414
+margin/bottom = 0.7
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+params/resize_mode = 1
+params/stretch_mode = 6
+script/script = SubResource( 1 )
+
+
