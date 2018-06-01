@@ -1,13 +1,13 @@
 [gd_scene load_steps=4 format=1]
 
-[sub_resource type="GDScript" id=3]
+[sub_resource type="GDScript" id=1]
 
 script/source = "extends Node
 
 func _ready():
 	get_tree().set_auto_accept_quit(true)"
 
-[sub_resource type="GDScript" id=1]
+[sub_resource type="GDScript" id=2]
 
 script/source = "extends Button
 
@@ -17,7 +17,7 @@ func _pressed():
 	# /root/global tiene la función para cambiar de escenas.
 	get_node(\"/root/global\").goto_scene(\"res://Diccionario.tscn\")"
 
-[sub_resource type="GDScript" id=2]
+[sub_resource type="GDScript" id=3]
 
 script/source = "extends Button
 
@@ -30,7 +30,7 @@ func _pressed():
 
 [node name="Node" type="Node"]
 
-script/script = SubResource( 3 )
+script/script = SubResource( 1 )
 
 [node name="BotonDiccionario" type="Button" parent="."]
 
@@ -51,7 +51,7 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Diccionario"
 flat = false
-script/script = SubResource( 1 )
+script/script = SubResource( 2 )
 
 [node name="BotonJuego" type="Button" parent="."]
 
@@ -72,6 +72,6 @@ enabled_focus_mode = 2
 shortcut = null
 text = "Juego"
 flat = false
-script/script = SubResource( 2 )
+script/script = SubResource( 3 )
 
 

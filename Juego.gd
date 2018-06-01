@@ -1,8 +1,7 @@
 extends Node
 
 # TODO: Evitar que dos del mismo nombre aparezcan o que sean contados como correctas.
-# TODO: Múltiples clicks no deberían dar más puntos
-# TODO: Corregir inicio en Android
+# TODO: Corregir inicio cuando se dan múltiples clicks
 
 var fabricaBotones = preload("res://OpcionJuego.tscn")
 onready var globales = get_node("/root/global")
@@ -54,9 +53,12 @@ func colocarOpciones():
 		opcionActual.id = opciones[i]
 	reproductorSonido.play(opcionCorrecta.nombreSonido, true)
 
+var tiempoRestanteParaOtraOpcion = -1
 # Llamado cuando el usuario hace click en alguna opción
 # id es la posición en el arreglo aplanado de la opción seleccionada.
 func seleccionarOpcion(id):
+	if tiempoRestanteParaOtraOpcion > 0 || cambiandoOpciones:
+		return
 	reproductorSonido.play(id.nombreSonido, true)
 	if (id == opcionCorrecta):
 		puntaje = puntaje + 100
@@ -64,7 +66,7 @@ func seleccionarOpcion(id):
 		puntaje = max(puntaje - 100, 0)
 	cambiandoOpciones = true
 
-var tiempoRestanteParaOtraOpcion = -1
+
 func _process(delta):
 	if cambiandoOpciones && !reproductorSonido.is_active():
 		cambiandoOpciones = false
