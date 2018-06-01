@@ -1,4 +1,11 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=4 format=1]
+
+[sub_resource type="GDScript" id=3]
+
+script/source = "extends Node
+
+func _ready():
+	get_tree().set_auto_accept_quit(true)"
 
 [sub_resource type="GDScript" id=1]
 
@@ -22,6 +29,8 @@ func _pressed():
 "
 
 [node name="Node" type="Node"]
+
+script/script = SubResource( 3 )
 
 [node name="BotonDiccionario" type="Button" parent="."]
 

@@ -6,7 +6,6 @@ var fabricaBotones = preload("res://BaseBotonSonido.tscn")
 var fabricaTitulos = preload("res://Titulo.tscn")
 
 # TODO: Partes de animales
-# TODO: Página inicial
 # TODO: Animales con varias pronunciaciones
 onready var globales = get_node("/root/global")
 onready var botones = globales.botones
@@ -16,6 +15,7 @@ var reproductorSonido
 
 # Crea los botones al comenzar el programa
 func _ready():
+	get_tree().set_auto_accept_quit(false) # Evita que el botón de atrás de Android cierre el programa, restaurado en la pantalla inicial.
 	reproductorSonido = self.get_child(2)
 	actualizarPagina()
 
@@ -56,3 +56,8 @@ func siguiente():
 	if (pagina < botones.size() - 1):
 		pagina += 1
 		actualizarPagina()
+
+# Usado para manejar el botón de regresar de Android.
+func _notification(what):
+	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
+		globales.goto_scene("res://Inicio.tscn")

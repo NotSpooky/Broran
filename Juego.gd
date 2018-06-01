@@ -1,6 +1,8 @@
 extends Node
 
 # TODO: Evitar que dos del mismo nombre aparezcan o que sean contados como correctas.
+# TODO: Múltiples clicks no deberían dar más puntos
+# TODO: Corregir inicio en Android
 
 var fabricaBotones = preload("res://OpcionJuego.tscn")
 onready var globales = get_node("/root/global")
@@ -14,6 +16,7 @@ var cambiandoOpciones = false # Empezó a sonar la opción seleccionada y se est
 
 
 func _ready():
+	get_tree().set_auto_accept_quit(false) # Evita que el botón de atrás de Android cierre el programa, restaurado en la pantalla inicial.
 	# Se obtienen los datos individuales, para ello se remueven los títulos y se aplana el arreglo.
 	for i in range (cantidadOpciones):
 		var botonOpcion = fabricaBotones.instance()
@@ -47,7 +50,6 @@ func colocarOpciones():
 		var opcionActual = nodosOpciones[i]
 		opcionActual.set_normal_texture(load("res://texturas/" + opciones[i].nombreTextura))
 		opcionActual.id = opciones[i]
-	
 	reproductorSonido.play(opcionCorrecta.nombreSonido, true)
 
 # Llamado cuando el usuario hace click en alguna opción
@@ -71,6 +73,13 @@ func _process(delta):
 			if tiempoRestanteParaOtraOpcion < 0:
 				colocarOpciones()
 	
+
+# Usado para manejar el botón de regresar de Android.
+func _notification(what):
+	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
+		globales.goto_scene("res://Inicio.tscn")
+
+# Funciones auxiliares:
 
 # Implementa reservoir sampling
 # cantidad es el N
