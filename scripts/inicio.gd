@@ -15,7 +15,9 @@ var reproductorSonido
 
 # Crea los botones al comenzar el programa
 func _ready():
-	get_tree().set_auto_accept_quit(false) # Evita que el botón de atrás de Android cierre el programa, restaurado en la pantalla inicial.
+	if OS.get_name() == "Android":
+		# Evita que el botón de atrás de Android cierre el programa, restaurado en la pantalla inicial.
+		get_tree().set_auto_accept_quit(false)
 	reproductorSonido = self.get_child(2)
 	actualizarPagina()
 
@@ -59,5 +61,5 @@ func siguiente():
 
 # Usado para manejar el botón de regresar de Android.
 func _notification(what):
-	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
+	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST && OS.get_name() == "Android":
 		globales.goto_scene("res://Inicio.tscn")

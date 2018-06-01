@@ -16,7 +16,9 @@ var cambiandoOpciones = false # Empezó a sonar la opción seleccionada y se est
 
 
 func _ready():
-	get_tree().set_auto_accept_quit(false) # Evita que el botón de atrás de Android cierre el programa, restaurado en la pantalla inicial.
+	if OS.get_name() == "Android":
+		# Evita que el botón de atrás de Android cierre el programa, restaurado en la pantalla inicial.
+		get_tree().set_auto_accept_quit(false)
 	# Se obtienen los datos individuales, para ello se remueven los títulos y se aplana el arreglo.
 	for i in range (cantidadOpciones):
 		var botonOpcion = fabricaBotones.instance()
@@ -72,11 +74,10 @@ func _process(delta):
 			tiempoRestanteParaOtraOpcion = tiempoRestanteParaOtraOpcion - delta
 			if tiempoRestanteParaOtraOpcion < 0:
 				colocarOpciones()
-	
 
 # Usado para manejar el botón de regresar de Android.
 func _notification(what):
-	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
+	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST && OS.get_name() == "Android":
 		globales.goto_scene("res://Inicio.tscn")
 
 # Funciones auxiliares:
