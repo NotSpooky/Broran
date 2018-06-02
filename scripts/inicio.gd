@@ -23,6 +23,7 @@ func _ready():
 
 # Llamado cuando se presionan los botones se anterior y siguiente, al final de las funciones anterior() y siguiente()
 
+var cantidadHijosNodo = 4 # Botones, reproductor de sonido y botón de regreso.
 func actualizarPagina():
 	if pagina == 0: # Se ocultan los botones al llegar a la primera y última página.
 		self.get_child(0).set_hidden(true)
@@ -32,9 +33,9 @@ func actualizarPagina():
 		self.get_child(1).set_hidden(true)
 	else:
 		self.get_child(1).set_hidden(false)
-	var cantidadBotones = self.get_child_count() - 3 # Los primeros 3 son los botones de anterior, siguiente y el reproductor de música
+	var cantidadBotones = self.get_child_count() - cantidadHijosNodo
 	for i in range(cantidadBotones):
-		self.remove_child(self.get_child(3))
+		self.remove_child(self.get_child(cantidadHijosNodo))
 	if typeof(botones [pagina]) == TYPE_STRING: # Es título.
 		var etiqueta = fabricaTitulos.instance()
 		etiqueta.set_text(botones[pagina])

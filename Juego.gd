@@ -44,7 +44,7 @@ func colocarOpciones():
 	reordenarAleatoriamente(opciones)
 	opcionCorrecta = opciones [0]
 	palabra.set_text(opcionCorrecta.textoPorMostrar)
-	var nodosOpciones = [self.get_child(3), self.get_child(4), self.get_child(5)]
+	var nodosOpciones = [self.get_child(4), self.get_child(5), self.get_child(6)]
 	assert(nodosOpciones.size() == cantidadOpciones)
 	reordenarAleatoriamente(opciones) # Para que no sea la primer opción siempre la correcta
 	for i in range(cantidadOpciones):
