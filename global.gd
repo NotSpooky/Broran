@@ -65,7 +65,7 @@ var botones = [
   DatosBoton.new("zrú̈n", "zrun.png", "zrun", Vector2(0.4, 0.7))
   , DatosBoton.new("iró̈n", "iron.png", "iron", Vector2(0.4, 0.4))
   # Revisar si pongo gúr̈eniá nada más.
-  , DatosBoton.new("gúr̈eniáhua", "gurenia.png", "gurenia", Vector2(0.1, 0.1), Vector2(0.45, 0.45))
+  , DatosBoton.new("gúr̈eniá", "gurenia.png", "gurenia", Vector2(0.1, 0.1), Vector2(0.45, 0.45))
   , DatosBoton.new("ó̈n", "on.png", "on", Vector2(0.1, 0.7)) ## FALTA AUDIO
   # Ojo que tiene subrayado.
   , DatosBoton.new("́r̲oshc̈̈ö/ár̲á", "roshco.png", "roshco", Vector2(0.7, 0.7), Vector2(0.55, 0.55))
