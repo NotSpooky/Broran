@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=1]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends TextureFrame
+
+var tamanoBase = Vector2(1024, 600)
+var margenBaseDer
+var margenBaseInf
+var escaladoBase
+func _ready():
+	pass
+	
+# Se debe llamar una vez esté colocado y visible en pantalla
+func colocado():
+	#tamanoBase = self.get_size()
+	escaladoBase = self.get_scale()
+	margenBaseDer = self.get_margin(MARGIN_RIGHT)
+	margenBaseInf = self.get_margin(MARGIN_BOTTOM)
+	ajustarTamano()
+	
+
+func ajustarTamano():
+	var tamPantalla = OS.get_window_size()
+	self.set_margin(MARGIN_RIGHT, margenBaseDer * tamanoBase.x / tamPantalla.x)
+	self.set_margin(MARGIN_BOTTOM, margenBaseInf * tamanoBase.y / tamPantalla.y)
+	self.set_scale(tamPantalla * escaladoBase / tamanoBase)"
+
+[node name="TextureFrame" type="TextureFrame"]
+
+anchor/left = 2
+anchor/top = 2
+anchor/right = 2
+anchor/bottom = 2
+rect/scale = Vector2( 0.5, 0.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 2.0
+margin/bottom = 2.0
+stretch_mode = 4
+script/script = SubResource( 1 )
+
+

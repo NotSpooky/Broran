@@ -27,7 +27,7 @@ func _ready():
 		botonOpcion.set_margin(MARGIN_RIGHT, 0.35 + (i * 0.25))
 	for i in range (opcionesSinAplanar.size()):
 		var actual = opcionesSinAplanar [i]
-		if typeof(actual) != TYPE_STRING: # Se ignoran títulos
+		if typeof(actual) == TYPE_ARRAY: # Se ignoran títulos y partes
 			for j in range (actual.size()):
 				botones.append(actual[j])
 	colocarOpciones()

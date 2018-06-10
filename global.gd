@@ -1,22 +1,54 @@
 extends Node
 var current_scene = null
 
+# Botón individual con título y texto.
 class DatosBoton:
 	var textoPorMostrar
 	var nombreTextura
 	var nombreSonido
-	var scale
-	var pos
-	func _init (textoPorMostrar, nomTex, nomSon, pos = Vector2(0.5,0.5), scale = Vector2(0.4, 0.4)):
+	var pos # Del margen superior izquierdo (ojo: las partes no se acomodan igual)
+	var escalado
+	func _init (textoPorMostrar, nomTex, nomSon, pos = Vector2(0.2,0.2), escalado = Vector2(0.4, 0.4)):
 		self.textoPorMostrar = textoPorMostrar
 		self.nombreTextura = nomTex
 		self.nombreSonido = nomSon
-		self.scale = scale
+		self.escalado = escalado
 		self.pos = pos
 
+class ParteAnimal:
+	var textoPorMostrar
+	var nombreSonido
+	var pos
+	func _init(textoPorMostrar, nomSon, pos = Vector2(0.5, 0.5)):
+		self.textoPorMostrar = textoPorMostrar
+		self.nombreSonido = nomSon
+		self.pos = pos
+
+class PartesAnimal:
+	var nombreTextura
+	var partes
+	var pos # Del centro de la figura, a diferencia de los DatosBoton que sí usan el margen superior izquierdo
+	var escalado
+	func _init(nomTex, partes = [], pos = Vector2(0.4, 0.4), escalado = Vector2(0.5, 0.5)):
+		self.nombreTextura = nomTex
+		self.escalado = escalado
+		self.pos = pos
+		self.partes = partes
+
 var botones = [ 
-  "Díro isó",
-  [
+  "Díro isó"
+  , [
+    PartesAnimal.new("zbonte.png"
+      , [
+        ParteAnimal.new("dabú cró", "dabu cro", Vector2(0.248, 0.468))
+        , ParteAnimal.new("frác", "frac 2", Vector2(0.39, 0.468))
+      ], Vector2(0.3, 0.3), Vector2(0.6, 0.6))
+    , PartesAnimal.new("c uehuo.png"
+      , [
+        ParteAnimal.new("cuóta", "c uehuo cuota", Vector2(0.667, 0.81))
+    ], Vector2(0.66, 0.66), Vector2(0.6, 0.6))
+  ]
+  , [
   # Peces. Hay que poner partes.
     DatosBoton.new("föcró/fòcro", "focro.png", "focro", Vector2(0.3,0.4), Vector2(0.55, 0.55))
   , DatosBoton.new("qu'èhuän", "qu ehuan.png", "qu ehuan", Vector2(0.5, 0.4), Vector2(0.6, 0.6))
@@ -61,6 +93,23 @@ var botones = [
   ],
   "Dubúc sóga" 
   , [
+    PartesAnimal.new("c rizuo.png"
+      , [
+        ParteAnimal.new("cohuo", "cohuo", Vector2(0.54, 0.175))
+        , ParteAnimal.new("dregró/dré", "dre", Vector2(0.55, 0.33))
+        , ParteAnimal.new("frác", "frac", Vector2(0.27, 0.35)) # Ojo es distinto el del pájaro a otros
+        , ParteAnimal.new("sogó", "sogo", Vector2(0.285, 0.165))
+      ], Vector2(0.45, 0.2), Vector2(0.6, 0.6))
+    , PartesAnimal.new("guroc.png"
+      , [
+        ParteAnimal.new("shú", "shu", Vector2(0.31, 0.75))
+    ], Vector2(0.2, 0.65), Vector2(0.3, 0.3))
+    , PartesAnimal.new("zorcua.png"
+      , [
+        ParteAnimal.new("zó̈n", "zon", Vector2(0.62, 0.5))
+    ], Vector2(0.75, 0.75), Vector2(0.55, 0.55))
+  ]
+  , [
   # Aves. Hay que poner título y partes.
   DatosBoton.new("zrú̈n", "zrun.png", "zrun", Vector2(0.4, 0.7))
   , DatosBoton.new("iró̈n", "iron.png", "iron", Vector2(0.4, 0.4))
@@ -72,11 +121,11 @@ var botones = [
   , DatosBoton.new("gúr̈efün", "gurefun.png", "gurefun", Vector2(0.4, 0.1))
   , DatosBoton.new("t̲agá", "taga.png", "taga", Vector2(0.7, 0.1))
   ], [  
-  DatosBoton.new("dö fú̈n", "do fun.png", "do fun", Vector2(0.3, 0.4), Vector2(0.6,0.6))
-  , DatosBoton.new("c'rízuo", "c rizuo.png", "c rizuo", Vector2(0.5, 0.4), Vector2(0.6, 0.6))
+  DatosBoton.new("dö fú̈n", "do fun.png", "do fun", Vector2(0.3, 0.4), Vector2(0.63,0.63))
+  , DatosBoton.new("c'rízuo", "c rizuo.png", "c rizuo", Vector2(0.5, 0.4), Vector2(0.65, 0.65))
   , DatosBoton.new("dünhuó", "dunhuo.png", "dunhuo", Vector2(0.1, 0.1), Vector2(0.5, 0.5))
   , DatosBoton.new("́r̲oshcöhua", "roshcohua.png", "roshcohua", Vector2(0.1, 0.65), Vector2(0.15, 0.15))
-  , DatosBoton.new("púpcuo", "pupcuo.png", "pupcuo", Vector2(0.7, 0.1))
+  , DatosBoton.new("púpcuo", "pupcuo.png", "pupcuo", Vector2(0.7, 0.1), Vector2(0.5, 0.5))
   , DatosBoton.new("́rurhuo", "rurhuo.png", "rurhuo", Vector2(0.7, 0.65), Vector2(0.12, 0.12))
   ], [
   DatosBoton.new("t'úr̈ehuó", "t urehuo.png", "t urehuo", Vector2(0.3, 0.4), Vector2(0.6, 0.6)) ## FALTA AUDIO
@@ -110,6 +159,25 @@ var botones = [
   , DatosBoton.new("igurhuó", "igurhuo.png", "igurhuo", Vector2(0.7, 0.1), Vector2(0.42, 0.42))
   ],
   "Óya dré t'oc é"
+  , [
+    PartesAnimal.new("gurinhuo.png"
+      , [
+        ParteAnimal.new("sápcuóta", "sapcuota", Vector2(0.175, 0.05))
+      ], Vector2(0.2, 0.32), Vector2(0.3, 0.3))
+    , PartesAnimal.new("shurin.png"
+      , [
+        ParteAnimal.new("sò", "so", Vector2(0.74, 0.14))
+    ], Vector2(0.65, 0.2), Vector2(0.5, 0.5))
+    , PartesAnimal.new("die.png"
+      , [
+        ParteAnimal.new("sác", "sac", Vector2(0.082, 0.63))
+        , ParteAnimal.new("shú", "shu", Vector2(0.324, 0.8))
+    ], Vector2(0.24, 0.75), Vector2(0.5, 0.5))
+    , PartesAnimal.new("cuomgra.png"
+      , [
+        ParteAnimal.new("sápcuóta", "sapcuota", Vector2(0.43, 0.83))
+    ], Vector2(0.7, 0.75), Vector2(0.4, 0.4))
+  ]
   , [
   # Animales con patas. Hay que poner título y partes.
 
@@ -192,21 +260,24 @@ var botones = [
 # De acá para abajo es el códido de cambio de escenas de ejemplo de Singletons de Godot
 
 func _ready():
-        var root = get_tree().get_root()
-        current_scene = root.get_child( root.get_child_count() -1 )
+	var root = get_tree().get_root()
+	current_scene = root.get_child( root.get_child_count() -1 )
+	set_process(true)
+
+func _process(delta):
+	print(get_viewport().get_mouse_pos() / get_viewport().get_rect().size)
 
 func goto_scene(path):
 
-    # This function will usually be called from a signal callback,
-    # or some other function from the running scene.
-    # Deleting the current scene at this point might be
-    # a bad idea, because it may be inside of a callback or function of it.
-    # The worst case will be a crash or unexpected behavior.
-
-    # The way around this is deferring the load to a later time, when
-    # it is ensured that no code from the current scene is running:
-
-    call_deferred("_deferred_goto_scene",path)
+	# This function will usually be called from a signal callback,
+	# or some other function from the running scene.
+	# Deleting the current scene at this point might be
+	# a bad idea, because it may be inside of a callback or function of it.
+	# The worst case will be a crash or unexpected behavior.
+	
+	# The way around this is deferring the load to a later time, when
+	# it is ensured that no code from the current scene is running:
+	call_deferred("_deferred_goto_scene",path)
 
 
 func _deferred_goto_scene(path):
