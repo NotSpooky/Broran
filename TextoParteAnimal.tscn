@@ -13,11 +13,13 @@ font/font = ExtResource( 1 )
 
 script/source = "extends Button
 
+var nombreSonido
+
 func _ready():
 	pass
 
 func _pressed():
-	pass"
+	self.get_parent().reproducirSonido(nombreSonido)"
 
 [node name="Button" type="Button"]
 

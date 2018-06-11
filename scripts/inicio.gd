@@ -71,6 +71,7 @@ func actualizarPagina():
 					self.add_child(botonParte)
 					botonParte.set_margin(MARGIN_LEFT, parte.pos.x)
 					botonParte.set_margin(MARGIN_TOP, parte.pos.y)
+					botonParte.nombreSonido = parte.nombreSonido
 
 		else:
 			# Es una lista de botones
@@ -81,7 +82,9 @@ func actualizarPagina():
 				# Provoca que se llame el ubicar
 				get_tree().connect("screen_resized", botonNuevo, "ubicar")
 
-
+# Usado por TextoParteAnimal.tscn pero no los otros
+func reproducirSonido(nombre):
+	reproductorSonido.play(nombre)
 
 # Llamados cuando se presionan los botones de los lados
 

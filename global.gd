@@ -40,8 +40,8 @@ var botones = [
   , [
     PartesAnimal.new("zbonte.png"
       , [
-        ParteAnimal.new("dabú cró", "dabu cro", Vector2(0.248, 0.468))
-        , ParteAnimal.new("frác", "frac 2", Vector2(0.39, 0.468))
+        ParteAnimal.new("dabú cró", "bomcuo dabu cro", Vector2(0.248, 0.468))
+        , ParteAnimal.new("frác", "bomcuo frac", Vector2(0.39, 0.468))
       ], Vector2(0.3, 0.3), Vector2(0.6, 0.6))
     , PartesAnimal.new("c uehuo.png"
       , [
@@ -97,7 +97,7 @@ var botones = [
       , [
         ParteAnimal.new("cohuo", "cohuo", Vector2(0.54, 0.175))
         , ParteAnimal.new("dregró/dré", "dre", Vector2(0.55, 0.33))
-        , ParteAnimal.new("frác", "frac", Vector2(0.27, 0.35)) # Ojo es distinto el del pájaro a otros
+        , ParteAnimal.new("frác", "frac 2", Vector2(0.27, 0.35)) # Ojo es distinto el del pájaro a otros
         , ParteAnimal.new("sogó", "sogo", Vector2(0.285, 0.165))
       ], Vector2(0.45, 0.2), Vector2(0.6, 0.6))
     , PartesAnimal.new("guroc.png"
@@ -106,7 +106,7 @@ var botones = [
     ], Vector2(0.2, 0.65), Vector2(0.3, 0.3))
     , PartesAnimal.new("zorcua.png"
       , [
-        ParteAnimal.new("zó̈n", "zon", Vector2(0.62, 0.5))
+        ParteAnimal.new("zó̈n", "zorcua zon", Vector2(0.62, 0.5))
     ], Vector2(0.75, 0.75), Vector2(0.55, 0.55))
   ]
   , [
@@ -162,7 +162,7 @@ var botones = [
   , [
     PartesAnimal.new("gurinhuo.png"
       , [
-        ParteAnimal.new("sápcuóta", "sapcuota", Vector2(0.175, 0.05))
+        ParteAnimal.new("sápcuóta", "sapcuo 1", Vector2(0.175, 0.05))
       ], Vector2(0.2, 0.32), Vector2(0.3, 0.3))
     , PartesAnimal.new("shurin.png"
       , [
@@ -170,12 +170,12 @@ var botones = [
     ], Vector2(0.65, 0.2), Vector2(0.5, 0.5))
     , PartesAnimal.new("die.png"
       , [
-        ParteAnimal.new("sác", "sac", Vector2(0.082, 0.63))
-        , ParteAnimal.new("shú", "shu", Vector2(0.324, 0.8))
+        ParteAnimal.new("sác", "die sac", Vector2(0.082, 0.63))
+        , ParteAnimal.new("shú", "die shu", Vector2(0.324, 0.8))
     ], Vector2(0.24, 0.75), Vector2(0.5, 0.5))
     , PartesAnimal.new("cuomgra.png"
       , [
-        ParteAnimal.new("sápcuóta", "sapcuota", Vector2(0.43, 0.83))
+        ParteAnimal.new("sápcuóta", "cuomgra sapcuo", Vector2(0.43, 0.83))
     ], Vector2(0.7, 0.75), Vector2(0.4, 0.4))
   ]
   , [
@@ -262,7 +262,7 @@ var botones = [
 func _ready():
 	var root = get_tree().get_root()
 	current_scene = root.get_child( root.get_child_count() -1 )
-	set_process(true)
+	#set_process(true)
 
 func _process(delta):
 	print(get_viewport().get_mouse_pos() / get_viewport().get_rect().size)
