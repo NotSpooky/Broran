@@ -35,8 +35,15 @@ class PartesAnimal:
 		self.pos = pos
 		self.partes = partes
 
+class Titulo:
+	var textoPorMostrar
+	var nombreSonido
+	func _init(textoPorMostrar, nomSon):
+		self.textoPorMostrar = textoPorMostrar
+		self.nombreSonido = nomSon
+
 var botones = [ 
-  "Díro isó"
+  Titulo.new("Díro isó", "diro iso")
   , [
     PartesAnimal.new("zbonte.png"
       , [
@@ -79,7 +86,7 @@ var botones = [
   , DatosBoton.new("c'ú", "c u.png", "c u", Vector2(0.15, 0.1), Vector2(0.8,0.8))
   , DatosBoton.new("c'uéhuo", "c uehuo.png", "c uehuo", Vector2(0.15, 0.6), Vector2(1, 1))
   ],
-  "Bugúr/dugúr"
+  Titulo.new("Bugúr/dugúr", "dugur")
  , [
   DatosBoton.new("önna zhguó", "onna zhguo.png", "onna zhguo", Vector2(0.65, 0.6), Vector2(0.5,0.5))
   , DatosBoton.new("sá", "sa.png", "sa", Vector2(0.65, 0.1), Vector2(0.7,0.7))
@@ -91,7 +98,7 @@ var botones = [
   , DatosBoton.new("dabará shuó", "dabara shuo.png", "dabara shuo", Vector2(0.65, 0.2), Vector2(0.5,0.5))
   , DatosBoton.new("dáró zhguó", "daro zhguo.png", "daro zhguo", Vector2(0.4, 0.65), Vector2(0.9,0.9))
   ],
-  "Dubúc sóga" 
+  Titulo.new("Dubúc sóga", "dubuc soga")
   , [
     PartesAnimal.new("c rizuo.png"
       , [
@@ -158,7 +165,7 @@ var botones = [
   , DatosBoton.new("orsèa", "orsea.png", "orsea", Vector2(0.4, 0.1))
   , DatosBoton.new("igurhuó", "igurhuo.png", "igurhuo", Vector2(0.7, 0.1), Vector2(0.42, 0.42))
   ],
-  "Óya dré t'oc é"
+  Titulo.new("Óya dré t'oc é", "oya dre t oc e")
   , [
     PartesAnimal.new("gurinhuo.png"
       , [
@@ -179,7 +186,6 @@ var botones = [
     ], Vector2(0.7, 0.75), Vector2(0.4, 0.4))
   ]
   , [
-  # Animales con patas. Hay que poner título y partes.
 
   DatosBoton.new("bagá", "baga.png", "baga", Vector2(0.3, 0.4))
   , DatosBoton.new("shcuè", "shcue.png", "shcue", Vector2(0.5, 0.4))
@@ -233,7 +239,7 @@ var botones = [
   , DatosBoton.new("shurí̈nh̲u̲a", "shurinhua.png", "shurinhua", Vector2(0.7, 0.1))
   ], [
   DatosBoton.new("sögrá", "sogra.png", "sogra", Vector2(0.3, 0.4))
-  , DatosBoton.new("cuomgrá/cuómcr̈en", "cuomgra.png", "cuomgra", Vector2(0.5, 0.4)) ## Está el otro audio también
+  , DatosBoton.new("cuomgrá/cuómcr̈en", "cuomgra.png", "cuomgra", Vector2(0.5, 0.4))
   # Hay 2 de este
   , DatosBoton.new("c'úrí", "c uri.png", "c uri", Vector2(0.1, 0.1))
   , DatosBoton.new("nepcuógra", "nepcuogra.png", "nepcuogra", Vector2(0.1, 0.7), Vector2(0.45,0.45))

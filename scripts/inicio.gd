@@ -39,13 +39,8 @@ func actualizarPagina():
 	for i in range(cantidadBotones):
 		self.remove_child(self.get_child(cantidadHijosNodo))
 	var elementoActual = botones [pagina] # Puede ser título, partes o lista de botones
-	
-	if typeof(elementoActual) == TYPE_STRING:     # Es título.
-		var etiqueta = fabricaTitulos.instance()
-		etiqueta.set_text(botones[pagina])
-		add_child(etiqueta)
 		
-	elif typeof(elementoActual) == TYPE_ARRAY:    
+	if typeof(elementoActual) == TYPE_ARRAY:    
 		assert (elementoActual.size() > 0)
 		if elementoActual[0] extends Globales.PartesAnimal:
 			# Partes de los animales
@@ -81,6 +76,12 @@ func actualizarPagina():
 				botonNuevo.init(boton.textoPorMostrar, boton.nombreSonido, boton.nombreTextura, boton.escalado, boton.pos, reproductorSonido)
 				# Provoca que se llame el ubicar
 				get_tree().connect("screen_resized", botonNuevo, "ubicar")
+	else: # Es título
+		var etiqueta = fabricaTitulos.instance()
+		etiqueta.set_text(elementoActual.textoPorMostrar)
+		reproductorSonido.play(elementoActual.nombreSonido)
+		add_child(etiqueta)
+	
 
 # Usado por TextoParteAnimal.tscn pero no los otros
 func reproducirSonido(nombre):
