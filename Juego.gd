@@ -14,13 +14,17 @@ var cantidadOpciones = 3
 var puntaje = 0
 var reproductorSonido
 var cambiandoOpciones = false # Empezó a sonar la opción seleccionada y se está esperando para cambiar las opciones en pantalla
-
+var mejorPuntaje = 0
 
 func _ready():
 	# Se busca el archivo de puntaje/
 	var puntajeGuardado = File.new()
-	puntajeGuardado.open("user://puntaje.pts", File.READ_WRITE)
-	print(puntajeGuardado)
+	puntajeGuardado.open("user://puntaje.pts", File.READ)
+	
+	if puntajeGuardado.is_open() && !puntajeGuardado.eof_reached():
+		mejorPuntaje = puntajeGuardado.get_32()
+	puntajeGuardado.close()
+	print("Mejor puntaje: ", mejorPuntaje)
 	
 	if OS.get_name() == "Android":
 		# Evita que el botón de atrás de Android cierre el programa, restaurado en la pantalla inicial.
@@ -69,11 +73,17 @@ func seleccionarOpcion(id):
 		return
 	reproductorSonido.play(id.nombreSonido, true)
 	if (id == opcionCorrecta):
-		puntaje = puntaje + 100
+		puntaje = puntaje + 1
+		cambiandoOpciones = true
 	else:
-		puntaje = max(puntaje - 100, 0)
-	cambiandoOpciones = true
-
+		if puntaje > mejorPuntaje:
+			mejorPuntaje = puntaje
+			print("Nuevo mejor puntaje: ", puntaje)
+			var puntajeGuardado = File.new()
+			puntajeGuardado.open("user://puntaje.pts", File.WRITE)
+			puntajeGuardado.store_32(mejorPuntaje)
+			puntajeGuardado.close()
+		get_node("/root/global").goto_scene("res://Inicio.tscn") # Regresa a la pantalla inicial.
 
 func _process(delta):
 	if cambiandoOpciones && !reproductorSonido.is_active():

@@ -4,14 +4,14 @@
 [ext_resource path="res://Cantarell-Regular.otf" type="DynamicFontData" id=2]
 [ext_resource path="res://ReproductorSonido.tscn" type="PackedScene" id=3]
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=1]
 
 font/size = 55
 font/use_mipmaps = false
 font/use_filter = false
 font/font = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=2]
 
 font/size = 35
 font/use_mipmaps = false
@@ -45,7 +45,7 @@ margin/left = 0.0
 margin/top = 25.0
 margin/right = 0.0
 margin/bottom = 98.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 align = 1
 percent_visible = 1.0
@@ -64,7 +64,7 @@ margin/left = 150.0
 margin/top = 35.0
 margin/right = 35.0
 margin/bottom = 72.0
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.228427, 0.355469, 0.0236053, 1 )
 percent_visible = 1.0
 lines_skipped = 0
@@ -72,7 +72,7 @@ max_lines_visible = -1
 
 [node name="ReproductorSonido" parent="." instance=ExtResource( 3 )]
 
-[node name="Button" type="Button" parent="."]
+[node name="Regresar" type="Button" parent="."]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
