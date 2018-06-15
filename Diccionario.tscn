@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=1]
 
-[ext_resource path="res://scripts/inicio.gd" type="Script" id=1]
+[ext_resource path="res://scripts/diccionario.gd" type="Script" id=1]
 [ext_resource path="res://texturas/flecha.png" type="Texture" id=2]
 [ext_resource path="res://ReproductorSonido.tscn" type="PackedScene" id=3]
 

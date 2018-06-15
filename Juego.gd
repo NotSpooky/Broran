@@ -5,6 +5,8 @@ extends Node
 
 var fabricaBotones = preload("res://OpcionJuego.tscn")
 onready var globales = get_node("/root/global")
+var Globales = preload("res://global.gd") # Ojo, distinto a globales
+
 onready var opcionesSinAplanar = globales.botones
 var opcionCorrecta = -1
 var botones = []
@@ -15,6 +17,11 @@ var cambiandoOpciones = false # Empezó a sonar la opción seleccionada y se est
 
 
 func _ready():
+	# Se busca el archivo de puntaje/
+	var puntajeGuardado = File.new()
+	puntajeGuardado.open("user://puntaje.pts", File.READ_WRITE)
+	print(puntajeGuardado)
+	
 	if OS.get_name() == "Android":
 		# Evita que el botón de atrás de Android cierre el programa, restaurado en la pantalla inicial.
 		get_tree().set_auto_accept_quit(false)
@@ -27,7 +34,8 @@ func _ready():
 		botonOpcion.set_margin(MARGIN_RIGHT, 0.35 + (i * 0.25))
 	for i in range (opcionesSinAplanar.size()):
 		var actual = opcionesSinAplanar [i]
-		if typeof(actual) == TYPE_ARRAY: # Se ignoran títulos y partes
+		if (typeof(actual) == TYPE_ARRAY) && (actual[0] extends Globales.DatosBoton): # Se ignoran títulos y partes
+			assert (actual.size() > 0)
 			for j in range (actual.size()):
 				botones.append(actual[j])
 	colocarOpciones()
