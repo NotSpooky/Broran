@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=1]
+
+[sub_resource type="GDScript" id=3]
+
+script/source = "extends Button
+
+func _ready():
+	if OS.get_name() == \"Android\":
+		self.set_hidden(true)
+		
+func _pressed():
+	get_node(\"/root/global\").goto_scene(\"res://Inicio.tscn\") # Regresa a la pantalla inicial.
+"
+
+[node name="Regresar" type="Button"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 67.0
+margin/bottom = 20.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Regresar"
+flat = false
+script/script = SubResource( 3 )
+
+

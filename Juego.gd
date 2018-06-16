@@ -83,7 +83,7 @@ func seleccionarOpcion(id):
 			puntajeGuardado.open("user://puntaje.pts", File.WRITE)
 			puntajeGuardado.store_32(mejorPuntaje)
 			puntajeGuardado.close()
-		get_node("/root/global").goto_scene("res://Inicio.tscn") # Regresa a la pantalla inicial.
+		globales.goto_scene("res://Puntajes.tscn") # Salta a la escena de puntajes.
 
 func _process(delta):
 	if cambiandoOpciones && !reproductorSonido.is_active():
