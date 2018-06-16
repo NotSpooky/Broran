@@ -1,4 +1,5 @@
 extends Node
+
 var current_scene = null
 
 # Botón individual con título y texto.
@@ -273,7 +274,7 @@ func _ready():
 func _process(delta):
 	print(get_viewport().get_mouse_pos() / get_viewport().get_rect().size)
 
-func goto_scene(path):
+func goto_scene(path, extra = null):
 
 	# This function will usually be called from a signal callback,
 	# or some other function from the running scene.
@@ -283,25 +284,25 @@ func goto_scene(path):
 	
 	# The way around this is deferring the load to a later time, when
 	# it is ensured that no code from the current scene is running:
-	call_deferred("_deferred_goto_scene",path)
+	call_deferred("_deferred_goto_scene",path, extra)
 
 
-func _deferred_goto_scene(path):
+func _deferred_goto_scene(path, extra = null):
 
-    # Immediately free the current scene,
-    # there is no risk here.
-    current_scene.free()
+	# Immediately free the current scene,
+	# there is no risk here.
+	current_scene.free()
 
-    # Load new scene
-    var s = ResourceLoader.load(path)
+	# Load new scene
+	var s = ResourceLoader.load(path)
 
-    # Instance the new scene
-    current_scene = s.instance()
+	# Instance the new scene
+	current_scene = s.instance()
 
-    # Add it to the active scene, as child of root
-    get_tree().get_root().add_child(current_scene)
+	# Add it to the active scene, as child of root
+	get_tree().get_root().add_child(current_scene)
 
-    # optional, to make it compatible with the SceneTree.change_scene() API
-    get_tree().set_current_scene( current_scene )
-
-
+	# optional, to make it compatible with the SceneTree.change_scene() API
+	get_tree().set_current_scene(current_scene)
+	if extra != null:
+		get_tree().get_root().get_child(1).init(extra)

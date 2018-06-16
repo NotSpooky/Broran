@@ -1,9 +1,32 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://BotonRegreso.tscn" type="PackedScene" id=1]
 [ext_resource path="res://TexoPuntaje.tres" type="DynamicFont" id=2]
 
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends Node
+
+onready var globales = get_node(\"/root/global\")
+
+# Usado para manejar el botón de regresar de Android.
+func _notification(what):
+	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST && OS.get_name() == \"Android\":
+		globales.goto_scene(\"res://Inicio.tscn\")
+
+
+func init(puntajes):
+	var puntajeActual = self.get_child(1)
+	var nuevoRecord = puntajeActual.get_child(1)
+	var mejorPuntaje = puntajeActual.get_child(0)
+	puntajeActual.set_text(puntajeActual.get_text() + \" \" + str(puntajes.puntaje))
+	mejorPuntaje.set_text(mejorPuntaje.get_text() + \" \" + str(puntajes.mejorPuntaje))
+	if puntajes.nuevoRecord:
+		nuevoRecord.set_hidden(false)"
+
 [node name="Node" type="Node"]
+
+script/script = SubResource( 1 )
 
 [node name="Regresar" parent="." instance=ExtResource( 1 )]
 
@@ -51,6 +74,7 @@ max_lines_visible = -1
 
 [node name="Nuevo record" type="Label" parent="Puntaje actual"]
 
+visibility/visible = false
 anchor/top = 2
 anchor/right = 1
 anchor/bottom = 1

@@ -7,14 +7,19 @@ var fabricaBotones = preload("res://OpcionJuego.tscn")
 onready var globales = get_node("/root/global")
 var Globales = preload("res://global.gd") # Ojo, distinto a globales
 
+class Puntajes:
+	var puntaje = 0
+	var mejorPuntaje = 0
+	var nuevoRecord = false
+
 onready var opcionesSinAplanar = globales.botones
+
+var puntajes = Puntajes.new()
 var opcionCorrecta = -1
 var botones = []
 var cantidadOpciones = 3
-var puntaje = 0
 var reproductorSonido
 var cambiandoOpciones = false # Empezó a sonar la opción seleccionada y se está esperando para cambiar las opciones en pantalla
-var mejorPuntaje = 0
 
 func _ready():
 	# Se busca el archivo de puntaje/
@@ -22,9 +27,9 @@ func _ready():
 	puntajeGuardado.open("user://puntaje.pts", File.READ)
 	
 	if puntajeGuardado.is_open() && !puntajeGuardado.eof_reached():
-		mejorPuntaje = puntajeGuardado.get_32()
+		puntajes.mejorPuntaje = puntajeGuardado.get_32()
 	puntajeGuardado.close()
-	print("Mejor puntaje: ", mejorPuntaje)
+	print("Mejor puntaje: ", puntajes.mejorPuntaje)
 	
 	if OS.get_name() == "Android":
 		# Evita que el botón de atrás de Android cierre el programa, restaurado en la pantalla inicial.
@@ -52,7 +57,7 @@ func colocarOpciones():
 	var palabra = self.get_child(0)
 	var etiquetaPuntaje = self.get_child(1)
 	reproductorSonido = self.get_child(2)
-	etiquetaPuntaje.set_text(str(puntaje))
+	etiquetaPuntaje.set_text(str(puntajes.puntaje))
 	reordenarAleatoriamente(opciones)
 	opcionCorrecta = opciones [0]
 	palabra.set_text(opcionCorrecta.textoPorMostrar)
@@ -73,17 +78,18 @@ func seleccionarOpcion(id):
 		return
 	reproductorSonido.play(id.nombreSonido, true)
 	if (id == opcionCorrecta):
-		puntaje = puntaje + 1
+		puntajes.puntaje = puntajes.puntaje + 1
 		cambiandoOpciones = true
 	else:
-		if puntaje > mejorPuntaje:
-			mejorPuntaje = puntaje
-			print("Nuevo mejor puntaje: ", puntaje)
+		if puntajes.puntaje > puntajes.mejorPuntaje:
+			puntajes.mejorPuntaje = puntajes.puntaje
+			print("Nuevo mejor puntaje: ", puntajes.puntaje)
 			var puntajeGuardado = File.new()
 			puntajeGuardado.open("user://puntaje.pts", File.WRITE)
-			puntajeGuardado.store_32(mejorPuntaje)
+			puntajeGuardado.store_32(puntajes.mejorPuntaje)
 			puntajeGuardado.close()
-		globales.goto_scene("res://Puntajes.tscn") # Salta a la escena de puntajes.
+			puntajes.nuevoRecord = true
+		globales.goto_scene("res://Puntajes.tscn", puntajes) # Salta a la escena de puntajes.
 
 func _process(delta):
 	if cambiandoOpciones && !reproductorSonido.is_active():
