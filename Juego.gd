@@ -109,6 +109,7 @@ func _notification(what):
 
 # Implementa reservoir sampling
 # cantidad es el N
+# Evita que dos elementos tengan el mismo texto (en el diccionario del brorán hay 2 animales con el mismo nombre)
 func seleccionarNAleatorios(opciones, cantidad):
 	var opcionesTotales = opciones.size()
 	assert(cantidad <= opcionesTotales)
@@ -121,7 +122,12 @@ func seleccionarNAleatorios(opciones, cantidad):
 	for i in range(cantidad, opcionesTotales):
 		var aleatorio = randi()%i
 		if(aleatorio < cantidad):
-			reserva [aleatorio] = opciones[i]
+			var elementoRepetido = false
+			for posReserva in range(0, reserva.size()):
+				if reserva[posReserva].textoPorMostrar == opciones[i].textoPorMostrar:
+					elementoRepetido = true
+			if !elementoRepetido:
+				reserva [aleatorio] = opciones[i]
 	return reserva
 
 func reordenarAleatoriamente(arreglo):
