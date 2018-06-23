@@ -290,12 +290,12 @@ func goto_scene(path, extra = null):
 	# it is ensured that no code from the current scene is running:
 	call_deferred("_deferred_goto_scene",path, extra)
 
-
-var cambiandoEscenas = false
+var cambiandoEscenasMut = Mutex.new()
+var pathEscenaActual = "res://Inicio.tscn"
 
 func _deferred_goto_scene(path, extra = null):
-	if !cambiandoEscenas:
-		cambiandoEscenas = true
+	if (cambiandoEscenasMut.try_lock() == OK) && (pathEscenaActual != path):
+		pathEscenaActual = path
 		# Immediately free the current scene,
 		# there is no risk here.
 		current_scene.free()
@@ -313,4 +313,4 @@ func _deferred_goto_scene(path, extra = null):
 		get_tree().set_current_scene(current_scene)
 		if extra != null:
 			get_tree().get_root().get_child(1).init(extra)
-		cambiandoEscenas = false
+		cambiandoEscenasMut.unlock()
