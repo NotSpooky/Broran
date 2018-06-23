@@ -25,6 +25,8 @@ func ubicar():
 	var tamPantalla = OS.get_window_size()
 	#var tamImagen = imagen().get_rect()
 	var nuevaPos = posicion * tamPantalla
+	# Pequeño offset hacia abajo
+	nuevaPos.y = nuevaPos.y + 10
 	imagen().set_pos(nuevaPos)
 	etiqueta().set_pos(nuevaPos - Vector2(0, 30)) # Coloca la etiqueta arriba de la imagen
 	imagen().set_scale(self.escalado * tamPantalla.x / 1900.0) # Evita que algunos tamaños de pantalla provoquen solapammiento de imágenes.

@@ -1,6 +1,15 @@
-[gd_scene load_steps=2 format=1]
+[gd_scene load_steps=4 format=1]
 
-[sub_resource type="GDScript" id=3]
+[ext_resource path="res://Cantarell-Regular.otf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+
+font/size = 22
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 1 )
+
+[sub_resource type="GDScript" id=1]
 
 script/source = "extends Button
 
@@ -14,19 +23,23 @@ func _pressed():
 
 [node name="Regresar" type="Button"]
 
+anchor/right = 2
+anchor/bottom = 2
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
-margin/right = 67.0
-margin/bottom = 20.0
+margin/right = 0.107422
+margin/bottom = 0.055
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Regresar"
 flat = false
-script/script = SubResource( 3 )
+script/script = SubResource( 1 )
 
 

@@ -63,4 +63,7 @@ max_lines_visible = -1
 
 [node name="Regresar" parent="." instance=ExtResource( 4 )]
 
+margin/left = 1.0
+margin/right = 0.151367
+
 
