@@ -263,16 +263,20 @@ var botones = [
   #, DatosBoton.new("sh́ró̈n", "shron.png", "shron", Vector2(0.4, 0.6))
 ] ]
 
+# Función para ayudar con el posicionamiento.
+func _process(delta):
+	print(get_viewport().get_mouse_pos() / get_viewport().get_rect().size)
 
 # De acá para abajo es el códido de cambio de escenas de ejemplo de Singletons de Godot
+# Modificaciones realizadas para evitar que el juego empiece múltiples veces si se presiona el botón
+# varias veces seguidas.
+
+var cambiandoEscena = false
 
 func _ready():
 	var root = get_tree().get_root()
 	current_scene = root.get_child( root.get_child_count() -1 )
 	#set_process(true)
-
-func _process(delta):
-	print(get_viewport().get_mouse_pos() / get_viewport().get_rect().size)
 
 func goto_scene(path, extra = null):
 
@@ -287,22 +291,26 @@ func goto_scene(path, extra = null):
 	call_deferred("_deferred_goto_scene",path, extra)
 
 
+var cambiandoEscenas = false
+
 func _deferred_goto_scene(path, extra = null):
+	if !cambiandoEscenas:
+		cambiandoEscenas = true
+		# Immediately free the current scene,
+		# there is no risk here.
+		current_scene.free()
 
-	# Immediately free the current scene,
-	# there is no risk here.
-	current_scene.free()
+		# Load new scene
+		var s = ResourceLoader.load(path)
 
-	# Load new scene
-	var s = ResourceLoader.load(path)
+		# Instance the new scene
+		current_scene = s.instance()
 
-	# Instance the new scene
-	current_scene = s.instance()
+		# Add it to the active scene, as child of root
+		get_tree().get_root().add_child(current_scene)
 
-	# Add it to the active scene, as child of root
-	get_tree().get_root().add_child(current_scene)
-
-	# optional, to make it compatible with the SceneTree.change_scene() API
-	get_tree().set_current_scene(current_scene)
-	if extra != null:
-		get_tree().get_root().get_child(1).init(extra)
+		# optional, to make it compatible with the SceneTree.change_scene() API
+		get_tree().set_current_scene(current_scene)
+		if extra != null:
+			get_tree().get_root().get_child(1).init(extra)
+		cambiandoEscenas = false

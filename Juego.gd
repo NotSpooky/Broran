@@ -1,7 +1,6 @@
 extends Node
 
 # TODO: Evitar que dos del mismo nombre aparezcan o que sean contados como correctas.
-# TODO: Corregir inicio cuando se dan múltiples clicks
 
 var fabricaBotones = preload("res://OpcionJuego.tscn")
 onready var globales = get_node("/root/global")
