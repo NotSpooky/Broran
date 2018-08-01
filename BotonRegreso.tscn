@@ -2,14 +2,14 @@
 
 [ext_resource path="res://Cantarell-Regular.otf" type="DynamicFontData" id=1]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 
 font/size = 22
 font/use_mipmaps = false
 font/use_filter = false
 font/font = ExtResource( 1 )
 
-[sub_resource type="GDScript" id=1]
+[sub_resource type="GDScript" id=2]
 
 script/source = "extends Button
 
@@ -33,13 +33,13 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 0.107422
 margin/bottom = 0.055
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Regresar"
 flat = false
-script/script = SubResource( 1 )
+script/script = SubResource( 2 )
 
 

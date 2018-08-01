@@ -9,14 +9,14 @@ script/source = "extends Node
 func _ready():
 	get_tree().set_auto_accept_quit(true)"
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=2]
 
 font/size = 40
 font/use_mipmaps = false
 font/use_filter = true
 font/font = ExtResource( 1 )
 
-[sub_resource type="GDScript" id=2]
+[sub_resource type="GDScript" id=3]
 
 script/source = "extends Button
 
@@ -26,14 +26,14 @@ func _pressed():
 	# /root/global tiene la función para cambiar de escenas.
 	get_node(\"/root/global\").goto_scene(\"res://Diccionario.tscn\")"
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=4]
 
 font/size = 40
 font/use_mipmaps = false
 font/use_filter = false
 font/font = ExtResource( 1 )
 
-[sub_resource type="GDScript" id=3]
+[sub_resource type="GDScript" id=5]
 
 script/source = "extends Button
 
@@ -60,16 +60,16 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.3
 margin/top = 0.15
-margin/right = 0.699805
+margin/right = 0.69961
 margin/bottom = 0.45
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Diccionario"
 flat = false
-script/script = SubResource( 2 )
+script/script = SubResource( 3 )
 
 [node name="BotonJuego" type="Button" parent="."]
 
@@ -85,13 +85,13 @@ margin/left = 0.3
 margin/top = 0.548333
 margin/right = 0.699805
 margin/bottom = 0.848333
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Juego"
 flat = false
-script/script = SubResource( 3 )
+script/script = SubResource( 5 )
 
 

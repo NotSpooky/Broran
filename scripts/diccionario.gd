@@ -31,6 +31,7 @@ func actualizarPagina():
 		self.get_child(0).set_hidden(true)
 	else:
 		self.get_child(0).set_hidden(false)
+		
 	if pagina == botones.size() - 1:
 		self.get_child(1).set_hidden(true)
 	else:

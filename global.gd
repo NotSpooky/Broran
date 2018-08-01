@@ -60,9 +60,9 @@ var botones = [
   # Peces. Hay que poner partes.
     DatosBoton.new("föcró/fòcro", "focro.png", "focro", Vector2(0.3,0.4), Vector2(0.55, 0.55))
   , DatosBoton.new("qu'èhuän", "qu ehuan.png", "qu ehuan", Vector2(0.5, 0.4), Vector2(0.6, 0.6))
-  , DatosBoton.new("c'ascuò", "c ascuo.png", "", Vector2(0.1, 0.1), Vector2(0.6, 0.6)) ## FALTA AUDIO
-  , DatosBoton.new("drémcuo", "dremcuo.png", "", Vector2(0.1, 0.7), Vector2(0.7, 0.7)) ## FALTA AUDIO
-  , DatosBoton.new("drémcuohua", "dremcuohua.png", "", Vector2(0.7, 0.1), Vector2(0.5, 0.5))  ## FALTA AUDIO
+  , DatosBoton.new("c'ascuò", "c ascuo.png", "c ascuo", Vector2(0.1, 0.1), Vector2(0.6, 0.6)) ## FALTA AUDIO
+  , DatosBoton.new("drémcuo", "dremcuo.png", "dremcuo", Vector2(0.1, 0.7), Vector2(0.7, 0.7)) ## FALTA AUDIO
+  , DatosBoton.new("drémcuohua", "dremcuohua.png", "dremcuohua", Vector2(0.7, 0.1), Vector2(0.5, 0.5))  ## FALTA AUDIO
   , DatosBoton.new("zbòntë", "zbonte.png", "zbonte", Vector2(0.7, 0.7), Vector2(0.7, 0.7))
   ], [
   # Está 2 veces
@@ -80,7 +80,7 @@ var botones = [
   # Repetido
   #, DatosBoton.new("bòmcuo", "bomcuo.png", "bomcuo", Vector2(0.7, 0.1), Vector2(0.65, 0.65))
   # Revisar si tiene otra tilde.
-  , DatosBoton.new("drú̈nbòmcuo", "drunbomcuo.png", "", Vector2(0.7, 0.7), Vector2(0.75, 0.75)) ## FALTA AUDIO
+  , DatosBoton.new("drú̈nbòmcuo", "drunbomcuo.png", "drunbomcuo", Vector2(0.7, 0.7), Vector2(0.75, 0.75)) ## FALTA AUDIO
   ], [
   DatosBoton.new("huor̈emcuó", "huoremcuo.png", "huoremcuo", Vector2(0.6, 0.1), Vector2(1, 1)) ## FALTA AUDIO
   , DatosBoton.new("shíti cóhuo", "shiti cohuo.png", "shiti cohuo", Vector2(0.6, 0.65), Vector2(0.9, 0.9))
