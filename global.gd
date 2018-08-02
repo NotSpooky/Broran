@@ -58,7 +58,7 @@ var botones = [
   ]
   , [
   # Peces. Hay que poner partes.
-    DatosBoton.new("föcró/fòcro", "focro.png", "focro", Vector2(0.3,0.4), Vector2(0.55, 0.55))
+    DatosBoton.new("föcró/fòcro", "focro.png", ["focro", "focro2"], Vector2(0.3,0.4), Vector2(0.55, 0.55))
   , DatosBoton.new("qu'èhuän", "qu ehuan.png", "qu ehuan", Vector2(0.5, 0.4), Vector2(0.6, 0.6))
   , DatosBoton.new("c'ascuò", "c ascuo.png", "c ascuo", Vector2(0.1, 0.1), Vector2(0.6, 0.6)) ## FALTA AUDIO
   , DatosBoton.new("drémcuo", "dremcuo.png", "dremcuo", Vector2(0.1, 0.7), Vector2(0.7, 0.7)) ## FALTA AUDIO
@@ -162,7 +162,7 @@ var botones = [
   , DatosBoton.new("bacahúrá", "bacahura.png", "bacahura", Vector2(0.4, 0.7), Vector2(0.7, 0.7))
   , DatosBoton.new("cúntr̈en", "cuntren.png", "cuntren", Vector2(0.1, 0.1), Vector2(0.5, 0.5))
   , DatosBoton.new("t'uèrhuo", "t uerhuo.png", "t uerhuo", Vector2(0.1, 0.7), Vector2(0.55,0.55))
-  , DatosBoton.new("fómcuo/pönguó", "fomcuo.png", "fomcuo", Vector2(0.7, 0.7))
+  , DatosBoton.new("fómcuo/pönguó", "fomcuo.png", ["fomcuo", "ponguo"], Vector2(0.7, 0.7))
   , DatosBoton.new("orsèa", "orsea.png", "orsea", Vector2(0.4, 0.1))
   , DatosBoton.new("igurhuó", "igurhuo.png", "igurhuo", Vector2(0.7, 0.1), Vector2(0.42, 0.42))
   ],
@@ -234,13 +234,13 @@ var botones = [
   ], [
   DatosBoton.new("böbrè̈n", "bobren.png", "bobren", Vector2(0.27, 0.4), Vector2(0.55, 0.55))
   , DatosBoton.new("shúrín dobó̈n", "shurin dobon.png", "shurin dobon", Vector2(0.5, 0.4))
-  , DatosBoton.new("dobó̈n täntá̈n/dobó̈n shricshrí", "dobon tantan.png", "dobon tantan", Vector2(0.1, 0.1))
+  , DatosBoton.new("dobó̈n täntá̈n/dobó̈n shricshrí", "dobon tantan.png", ["dobon tantan", "dobon shricshri"], Vector2(0.1, 0.1))
   , DatosBoton.new("shití", "shiti.png", "shiti", Vector2(0.1, 0.7))
   , DatosBoton.new("físcuo", "fiscuo.png", "fiscuo", Vector2(0.7, 0.7))
   , DatosBoton.new("shurí̈nh̲u̲a", "shurinhua.png", "shurinhua", Vector2(0.7, 0.1))
   ], [
   DatosBoton.new("sögrá", "sogra.png", "sogra", Vector2(0.3, 0.4))
-  , DatosBoton.new("cuomgrá/cuómcr̈en", "cuomgra.png", "cuomgra", Vector2(0.5, 0.4))
+  , DatosBoton.new("cuomgrá/cuómcr̈en", "cuomgra.png", ["cuomgra", "cuomcren"], Vector2(0.5, 0.4))
   # Hay 2 de este
   , DatosBoton.new("c'úrí", "c uri.png", "c uri", Vector2(0.1, 0.1))
   , DatosBoton.new("nepcuógra", "nepcuogra.png", "nepcuogra", Vector2(0.1, 0.7), Vector2(0.45,0.45))
@@ -257,7 +257,7 @@ var botones = [
   DatosBoton.new("juó̈n", "juon.png", "juon", Vector2(0.1, 0.1), Vector2(0.5, 0.5))
   , DatosBoton.new("dögòbia", "dogobia.png", "dogobia", Vector2(0.4, 0.35), Vector2(0.6, 0.6))
   # El rircuasa no tiene tilde en la i?
-  , DatosBoton.new("́rír/́rircuása", "rir.png", "rir", Vector2(0.6, 0.1), Vector2(0.35, 0.35))
+  , DatosBoton.new("́rír/́rircuása", "rir.png", ["rir", "rircuasa"], Vector2(0.6, 0.1), Vector2(0.35, 0.35))
   , DatosBoton.new("shcúrcuaco", "shcurcuaco.png", "shcurcuaco", Vector2(0.25, 0.75), Vector2(0.9, 0.9))
   , DatosBoton.new("shúscro", "shuscro.png", "shuscro", Vector2(0.6, 0.75), Vector2(0.9, 0.9))
   #, DatosBoton.new("sh́ró̈n", "shron.png", "shron", Vector2(0.4, 0.6))
