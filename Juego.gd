@@ -67,7 +67,10 @@ func colocarOpciones():
 		var opcionActual = nodosOpciones[i]
 		opcionActual.set_normal_texture(load("res://texturas/" + opciones[i].nombreTextura))
 		opcionActual.id = opciones[i]
-	reproductorSonido.play(opcionCorrecta.nombreSonido, true)
+	var sonido = opcionCorrecta.nombreSonido
+	if typeof(sonido) == TYPE_ARRAY: # Si hay varios sonidos, usar el primero
+		sonido = sonido [0]
+	reproductorSonido.play(sonido, true)
 
 var tiempoRestanteParaOtraOpcion = -1
 # Llamado cuando el usuario hace click en alguna opción
@@ -75,7 +78,10 @@ var tiempoRestanteParaOtraOpcion = -1
 func seleccionarOpcion(id):
 	if tiempoRestanteParaOtraOpcion > 0 || cambiandoOpciones:
 		return
-	reproductorSonido.play(id.nombreSonido, true)
+	var sonido = id.nombreSonido
+	if typeof(sonido) == TYPE_ARRAY: # Si hay varios sonidos, usar el primero
+		sonido = sonido [0]
+	reproductorSonido.play(sonido, true)
 	if (id == opcionCorrecta):
 		puntajes.puntaje = puntajes.puntaje + 1
 		cambiandoOpciones = true
