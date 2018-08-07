@@ -132,7 +132,7 @@ var botones = [
   DatosBoton.new("dö fú̈n", "do fun.png", "do fun", Vector2(0.3, 0.4), Vector2(0.63,0.63))
   , DatosBoton.new("c'rízuo", "c rizuo.png", "c rizuo", Vector2(0.5, 0.4), Vector2(0.65, 0.65))
   , DatosBoton.new("dünhuó", "dunhuo.png", "dunhuo", Vector2(0.1, 0.1), Vector2(0.5, 0.5))
-  , DatosBoton.new("́r̲oshcöhua", "roshcohua.png", "roshcohua", Vector2(0.1, 0.65), Vector2(0.15, 0.15))
+  , DatosBoton.new("́r̲oshcöhua", "roshcohua.png", "roshcohua2", Vector2(0.1, 0.65), Vector2(0.15, 0.15))
   , DatosBoton.new("púpcuo", "pupcuo.png", "pupcuo", Vector2(0.7, 0.1), Vector2(0.5, 0.5))
   , DatosBoton.new("́rurhuo", "rurhuo.png", "rurhuo", Vector2(0.7, 0.65), Vector2(0.12, 0.12))
   ], [
