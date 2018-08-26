@@ -3,12 +3,16 @@ extends Node
 # Se puede instanciar cada "escena" con .instance()
 var fabricaBotones = preload("res://BaseBotonSonido.tscn")
 var fabricaTitulos = preload("res://Titulo.tscn")
+# Similar a fabricaTitulos pero con un tamaño de fuente mayor.
+# No encontré una manera de cambiar dinámicamente el tamaño de fuente.
+var fabricaTituloInicial = preload("res://TituloInicial.tscn")
+# Similar a fabricaTitulos pero con un tamaño de fuente menor.
+var fabricaCreditos = preload("res://Creditos.tscn")
 var fabricaPartes  = preload("res://PartesAnimal.tscn")
 var fabricaTextoPartes = preload("res://TextoParteAnimal.tscn")
 
-# TODO: Partes de animales
-# TODO: Animales con varias pronunciaciones
-onready var globales = get_node("/root/global")
+# Ojo, distinto a Globales que es un script, este es un nodo de uso general.
+onready var globales = get_node("/root/global") 
 onready var botones = globales.botones
 
 var pagina = 0
@@ -78,7 +82,14 @@ func actualizarPagina():
 				# Provoca que se llame el ubicar
 				get_tree().connect("screen_resized", botonNuevo, "ubicar")
 	else: # Es título
-		var etiqueta = fabricaTitulos.instance()
+		var etiqueta
+		if elementoActual.tipo == Globales.TipoTitulo.inicial:
+			etiqueta = fabricaTituloInicial.instance()
+		elif elementoActual.tipo == Globales.TipoTitulo.seccion:
+			etiqueta = fabricaTitulos.instance()
+		else:
+			assert(elementoActual.tipo == Globales.TipoTitulo.creditos)
+			etiqueta = fabricaCreditos.instance()
 		etiqueta.set_text(elementoActual.textoPorMostrar)
 		reproductorSonido.play(elementoActual.nombreSonido)
 		add_child(etiqueta)

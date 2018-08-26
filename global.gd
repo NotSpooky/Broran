@@ -36,15 +36,62 @@ class PartesAnimal:
 		self.pos = pos
 		self.partes = partes
 
+enum TipoTitulo {
+	inicial, seccion, creditos
+}
+
 class Titulo:
 	var textoPorMostrar
 	var nombreSonido
-	func _init(textoPorMostrar, nomSon):
+	var tipo
+	func _init(textoPorMostrar, nomSon, tipo = TipoTitulo.seccion):
 		self.textoPorMostrar = textoPorMostrar
 		self.nombreSonido = nomSon
+		self.tipo = tipo
 
-var botones = [ 
-  Titulo.new("Díro isó", "diro iso")
+var creditosP1 = """UNIVERSIDAD DE COSTA RICA
+VICERRECTORÍA DE ACCIÓN SOCIAL
+SECCIÓN DE TRABAJO COMUNAL UNIVERSITARIO
+ESCUELA DE FILOLOGÍA, LINGÜÍSTICA Y LITERATURA
+TC-625 "DIVERSIDAD LINGÜÍSTICA DE COSTA RICA"
+Óhua. Diccionario pictográfico de los animales en Brörá̈n qu'ercuó
+(la lengua de Térraba)
+
+Fuentes de los datos: La lengua de Térraba de Adolfo Constenla Umaña, Lenguas
+indígenas de Costa Rica de Víctor Manuel Arroyo, Ensayo lexicográfico sobre la lengua
+de Térraba de Henri Pittier y Carlos Gagini, Apuntes lexicográficos de las lenguas y
+dialectos de los indios de Costa Rica de Bernardo Augusto Thiel, "Tribus y lenguas indí-
+genas de Costa Rica" de William Gabb, y el vocabulario térraba recogido por Joseph de
+Olabarrieta.
+Hablantes consultados por Constenla: Ricardo Gómez Salazar, María Casiola Ortiz Mo-
+rales, Francisco Mamerto Ortiz, Sotero Carrera Ortiz, Damiana Rivera Guillén, Marcos
+Elpidio Ortiz Morales.
+"""
+
+var creditosP2 = """Hablantes de la variedad de naso panameño consultados para la elaboración de este 
+material: Faciano Vargas Nicolás, con la colaboración de Adelfia González Vargas, Inés
+Villagra Sánchez y Florencio Gamarra Rodríguez.
+Coordinación técnica desde la perspectiva biológica: Isaac Solano Rodríguez, con la
+colaboración de Carlos Sánchez Avendaño.
+Colaboración con en el proceso de revisión: Jorge Navas Rojas y José Luis Navas Rivera
+Ilustraciones: Matrian Cerdas Chavarría, Francella Artavia Hernández, Ana Carolina
+Fernández Barboza, Eduardo Vargas Montero, Kevin Mora Molina y Pamela Zamora.
+Miranda.
+Montaje del diccionario: Marian Cerdas Chavarría y Francella Artavia Hernández.
+Artes finales: Fabián Bolaños Villegas.
+Creación del diccionario virtual y juego: Christian Durán Carvajal.
+Selección de los datos, revisión, reconstitución del vocabulario y coordinación general
+del proyecto: Carlos Sánchez Avendaño.
+Contacto: dipalicori.efll@ucr.ac.cr
+
+Material de distribución gratuita
+La creación y publicación de este material fue posible gracias al finan-
+ciamiento de la Vicerrectoría de Acción social de la Universidad de Costa Rica.
+"""
+
+var botones = [
+  Titulo.new("Óhua", "ohua", true)
+  , Titulo.new("Díro isó", "diro iso")
   , [
     PartesAnimal.new("zbonte.png"
       , [
@@ -261,7 +308,10 @@ var botones = [
   , DatosBoton.new("shcúrcuaco", "shcurcuaco.png", "shcurcuaco", Vector2(0.25, 0.75), Vector2(0.9, 0.9))
   , DatosBoton.new("shúscro", "shuscro.png", "shuscro", Vector2(0.6, 0.75), Vector2(0.9, 0.9))
   #, DatosBoton.new("sh́ró̈n", "shron.png", "shron", Vector2(0.4, 0.6))
-] ]
+  ]
+  , Titulo.new(creditosP1, "", TipoTitulo.creditos)
+  , Titulo.new(creditosP2, "", TipoTitulo.creditos)
+]
 
 # Función para ayudar con el posicionamiento.
 func _process(delta):
