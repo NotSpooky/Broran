@@ -1,4 +1,4 @@
-[gd_resource type="SampleLibrary" load_steps=167 format=1]
+[gd_resource type="SampleLibrary" load_steps=168 format=1]
 
 [ext_resource path="res://audios/112-domesticos shiti.wav" type="Sample" id=1]
 [ext_resource path="res://audios/113-titulo domesticos.wav" type="Sample" id=2]
@@ -121,51 +121,52 @@
 [ext_resource path="res://audios/roshcohua2.wav" type="Sample" id=119]
 [ext_resource path="res://audios/rurhuo.wav" type="Sample" id=120]
 [ext_resource path="res://audios/sa.wav" type="Sample" id=121]
-[ext_resource path="res://audios/saron.wav" type="Sample" id=122]
-[ext_resource path="res://audios/shco.wav" type="Sample" id=123]
-[ext_resource path="res://audios/shcuan si.wav" type="Sample" id=124]
-[ext_resource path="res://audios/shcue.wav" type="Sample" id=125]
-[ext_resource path="res://audios/shcurcuaco.wav" type="Sample" id=126]
-[ext_resource path="res://audios/shcure.wav" type="Sample" id=127]
-[ext_resource path="res://audios/shic.wav" type="Sample" id=128]
-[ext_resource path="res://audios/shiti.wav" type="Sample" id=129]
-[ext_resource path="res://audios/shiti cohuo.wav" type="Sample" id=130]
-[ext_resource path="res://audios/shri.wav" type="Sample" id=131]
-[ext_resource path="res://audios/shron.wav" type="Sample" id=132]
-[ext_resource path="res://audios/shron 2.wav" type="Sample" id=133]
-[ext_resource path="res://audios/shto.wav" type="Sample" id=134]
-[ext_resource path="res://audios/shugo.wav" type="Sample" id=135]
-[ext_resource path="res://audios/shuohuo.wav" type="Sample" id=136]
-[ext_resource path="res://audios/shurco.wav" type="Sample" id=137]
-[ext_resource path="res://audios/shurin.wav" type="Sample" id=138]
-[ext_resource path="res://audios/shurin dobon.wav" type="Sample" id=139]
-[ext_resource path="res://audios/shurin dugur.wav" type="Sample" id=140]
-[ext_resource path="res://audios/shurinhua.wav" type="Sample" id=141]
-[ext_resource path="res://audios/shuscro.wav" type="Sample" id=142]
-[ext_resource path="res://audios/so.wav" type="Sample" id=143]
-[ext_resource path="res://audios/sogo.wav" type="Sample" id=144]
-[ext_resource path="res://audios/sogra.wav" type="Sample" id=145]
-[ext_resource path="res://audios/srigra zhguo.wav" type="Sample" id=146]
-[ext_resource path="res://audios/sro idon.wav" type="Sample" id=147]
-[ext_resource path="res://audios/sron.wav" type="Sample" id=148]
-[ext_resource path="res://audios/sruc.wav" type="Sample" id=149]
-[ext_resource path="res://audios/susbo.wav" type="Sample" id=150]
-[ext_resource path="res://audios/t in.wav" type="Sample" id=151]
-[ext_resource path="res://audios/t uerhuo.wav" type="Sample" id=152]
-[ext_resource path="res://audios/t uerhuo 2.wav" type="Sample" id=153]
-[ext_resource path="res://audios/t urehuo.wav" type="Sample" id=154]
-[ext_resource path="res://audios/taga.wav" type="Sample" id=155]
-[ext_resource path="res://audios/ton.wav" type="Sample" id=156]
-[ext_resource path="res://audios/yaigo.wav" type="Sample" id=157]
-[ext_resource path="res://audios/zbo.wav" type="Sample" id=158]
-[ext_resource path="res://audios/zbonte.wav" type="Sample" id=159]
-[ext_resource path="res://audios/zgohuo.wav" type="Sample" id=160]
-[ext_resource path="res://audios/zhguro.wav" type="Sample" id=161]
-[ext_resource path="res://audios/zhir.wav" type="Sample" id=162]
-[ext_resource path="res://audios/zingra.wav" type="Sample" id=163]
-[ext_resource path="res://audios/zorcua.wav" type="Sample" id=164]
-[ext_resource path="res://audios/zorcua zon.wav" type="Sample" id=165]
-[ext_resource path="res://audios/zrun.wav" type="Sample" id=166]
+[ext_resource path="res://audios/sapcuo 1.wav" type="Sample" id=122]
+[ext_resource path="res://audios/saron.wav" type="Sample" id=123]
+[ext_resource path="res://audios/shco.wav" type="Sample" id=124]
+[ext_resource path="res://audios/shcuan si.wav" type="Sample" id=125]
+[ext_resource path="res://audios/shcue.wav" type="Sample" id=126]
+[ext_resource path="res://audios/shcurcuaco.wav" type="Sample" id=127]
+[ext_resource path="res://audios/shcure.wav" type="Sample" id=128]
+[ext_resource path="res://audios/shic.wav" type="Sample" id=129]
+[ext_resource path="res://audios/shiti.wav" type="Sample" id=130]
+[ext_resource path="res://audios/shiti cohuo.wav" type="Sample" id=131]
+[ext_resource path="res://audios/shri.wav" type="Sample" id=132]
+[ext_resource path="res://audios/shron.wav" type="Sample" id=133]
+[ext_resource path="res://audios/shron 2.wav" type="Sample" id=134]
+[ext_resource path="res://audios/shto.wav" type="Sample" id=135]
+[ext_resource path="res://audios/shugo.wav" type="Sample" id=136]
+[ext_resource path="res://audios/shuohuo.wav" type="Sample" id=137]
+[ext_resource path="res://audios/shurco.wav" type="Sample" id=138]
+[ext_resource path="res://audios/shurin.wav" type="Sample" id=139]
+[ext_resource path="res://audios/shurin dobon.wav" type="Sample" id=140]
+[ext_resource path="res://audios/shurin dugur.wav" type="Sample" id=141]
+[ext_resource path="res://audios/shurinhua.wav" type="Sample" id=142]
+[ext_resource path="res://audios/shuscro.wav" type="Sample" id=143]
+[ext_resource path="res://audios/so.wav" type="Sample" id=144]
+[ext_resource path="res://audios/sogo.wav" type="Sample" id=145]
+[ext_resource path="res://audios/sogra.wav" type="Sample" id=146]
+[ext_resource path="res://audios/srigra zhguo.wav" type="Sample" id=147]
+[ext_resource path="res://audios/sro idon.wav" type="Sample" id=148]
+[ext_resource path="res://audios/sron.wav" type="Sample" id=149]
+[ext_resource path="res://audios/sruc.wav" type="Sample" id=150]
+[ext_resource path="res://audios/susbo.wav" type="Sample" id=151]
+[ext_resource path="res://audios/t in.wav" type="Sample" id=152]
+[ext_resource path="res://audios/t uerhuo.wav" type="Sample" id=153]
+[ext_resource path="res://audios/t uerhuo 2.wav" type="Sample" id=154]
+[ext_resource path="res://audios/t urehuo.wav" type="Sample" id=155]
+[ext_resource path="res://audios/taga.wav" type="Sample" id=156]
+[ext_resource path="res://audios/ton.wav" type="Sample" id=157]
+[ext_resource path="res://audios/yaigo.wav" type="Sample" id=158]
+[ext_resource path="res://audios/zbo.wav" type="Sample" id=159]
+[ext_resource path="res://audios/zbonte.wav" type="Sample" id=160]
+[ext_resource path="res://audios/zgohuo.wav" type="Sample" id=161]
+[ext_resource path="res://audios/zhguro.wav" type="Sample" id=162]
+[ext_resource path="res://audios/zhir.wav" type="Sample" id=163]
+[ext_resource path="res://audios/zingra.wav" type="Sample" id=164]
+[ext_resource path="res://audios/zorcua.wav" type="Sample" id=165]
+[ext_resource path="res://audios/zorcua zon.wav" type="Sample" id=166]
+[ext_resource path="res://audios/zrun.wav" type="Sample" id=167]
 
 [resource]
 
@@ -907,286 +908,292 @@ samples/sa = {
 "priority": 0,
 "sample": ExtResource( 121 )
 }
-samples/saron = {
+"samples/sapcuo 1" = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 122 )
 }
-samples/shco = {
+samples/saron = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 123 )
 }
-"samples/shcuan si" = {
+samples/shco = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 124 )
 }
-samples/shcue = {
+"samples/shcuan si" = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 125 )
 }
-samples/shcurcuaco = {
+samples/shcue = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 126 )
 }
-samples/shcure = {
+samples/shcurcuaco = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 127 )
 }
-samples/shic = {
+samples/shcure = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 128 )
 }
-samples/shiti = {
+samples/shic = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 129 )
 }
-"samples/shiti cohuo" = {
+samples/shiti = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 130 )
 }
-samples/shri = {
+"samples/shiti cohuo" = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 131 )
 }
-samples/shron = {
+samples/shri = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 132 )
 }
-"samples/shron 2" = {
+samples/shron = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 133 )
 }
-samples/shto = {
+"samples/shron 2" = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 134 )
 }
-samples/shugo = {
+samples/shto = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 135 )
 }
-samples/shuohuo = {
+samples/shugo = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 136 )
 }
-samples/shurco = {
+samples/shuohuo = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 137 )
 }
-samples/shurin = {
+samples/shurco = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 138 )
 }
-"samples/shurin dobon" = {
+samples/shurin = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 139 )
 }
-"samples/shurin dugur" = {
+"samples/shurin dobon" = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 140 )
 }
-samples/shurinhua = {
+"samples/shurin dugur" = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 141 )
 }
-samples/shuscro = {
+samples/shurinhua = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 142 )
 }
-samples/so = {
+samples/shuscro = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 143 )
 }
-samples/sogo = {
+samples/so = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 144 )
 }
-samples/sogra = {
+samples/sogo = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 145 )
 }
-"samples/srigra zhguo" = {
+samples/sogra = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 146 )
 }
-"samples/sro idon" = {
+"samples/srigra zhguo" = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 147 )
 }
-samples/sron = {
+"samples/sro idon" = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 148 )
 }
-samples/sruc = {
+samples/sron = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 149 )
 }
-samples/susbo = {
+samples/sruc = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 150 )
 }
-"samples/t in" = {
+samples/susbo = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 151 )
 }
-"samples/t uerhuo" = {
+"samples/t in" = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 152 )
 }
-"samples/t uerhuo 2" = {
+"samples/t uerhuo" = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 153 )
 }
-"samples/t uerhuo_1" = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 152 )
-}
-"samples/t urehuo" = {
+"samples/t uerhuo 2" = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 154 )
 }
-samples/taga = {
+"samples/t uerhuo_1" = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 153 )
+}
+"samples/t urehuo" = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 155 )
 }
-samples/ton = {
+samples/taga = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 156 )
 }
-samples/yaigo = {
+samples/ton = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 157 )
 }
-samples/zbo = {
+samples/yaigo = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 158 )
 }
-samples/zbonte = {
+samples/zbo = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 159 )
 }
+samples/zbonte = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 160 )
+}
 samples/zgohuo = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 160 )
-}
-samples/zgohuo_1 = {
-"db": 0.0,
-"pitch": 1.0,
-"priority": 0,
-"sample": ExtResource( 160 )
-}
-samples/zhguro = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 161 )
 }
-samples/zhir = {
+samples/zgohuo_1 = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 161 )
+}
+samples/zhguro = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 162 )
 }
-samples/zingra = {
+samples/zhir = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 163 )
 }
-samples/zorcua = {
+samples/zingra = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 164 )
 }
-"samples/zorcua zon" = {
+samples/zorcua = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 165 )
 }
-samples/zrun = {
+"samples/zorcua zon" = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 166 )
+}
+samples/zrun = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 167 )
 }
 

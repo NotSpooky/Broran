@@ -93,9 +93,10 @@ var botones = [
   Titulo.new("Óhua", "ohua", TipoTitulo.inicial)
   , Titulo.new("Díro isó", "diro iso")
   , [
-    PartesAnimal.new("zbonte.png"
+	# En la carpeta de partes.
+    PartesAnimal.new("bomcuo.png"
       , [
-        ParteAnimal.new("bòmcuo dabú cró", "bomcuo dabu cro", Vector2(0.248, 0.468))
+        ParteAnimal.new("bòmcuo dabú cró", "bomcuo dabu cro", Vector2(0.148, 0.468))
         , ParteAnimal.new("bòmcuo frác", "bomcuo frac", Vector2(0.39, 0.468))
       ], Vector2(0.3, 0.3), Vector2(0.6, 0.6))
     , PartesAnimal.new("c uehuo.png"
@@ -217,7 +218,7 @@ var botones = [
   , [
     PartesAnimal.new("gurinhuo.png"
       , [
-        ParteAnimal.new("sápcuóta", "sapcuo 1", Vector2(0.175, 0.05))
+        ParteAnimal.new("sápcuóta", "sapcuo 1", Vector2(0.175, 0.075))
       ], Vector2(0.2, 0.32), Vector2(0.3, 0.3))
     , PartesAnimal.new("shurin.png"
       , [
@@ -225,12 +226,12 @@ var botones = [
     ], Vector2(0.65, 0.2), Vector2(0.5, 0.5))
     , PartesAnimal.new("die.png"
       , [
-        ParteAnimal.new("dié sác", "die sac", Vector2(0.082, 0.63))
-        , ParteAnimal.new("dié shú", "die shu", Vector2(0.324, 0.8))
+        ParteAnimal.new("dié sác", "die sac", Vector2(0.042, 0.63))
+        , ParteAnimal.new("dié shú", "die shu", Vector2(0.323, 0.8))
     ], Vector2(0.24, 0.75), Vector2(0.5, 0.5))
     , PartesAnimal.new("cuomgra.png"
       , [
-        ParteAnimal.new("sápcuóta", "cuomgra sapcuo", Vector2(0.43, 0.83))
+        ParteAnimal.new("sápcuóta", "cuomgra sapcuo", Vector2(0.45, 0.84))
     ], Vector2(0.7, 0.75), Vector2(0.4, 0.4))
   ]
   , [
