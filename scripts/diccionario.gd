@@ -91,7 +91,8 @@ func actualizarPagina():
 			assert(elementoActual.tipo == Globales.TipoTitulo.creditos)
 			etiqueta = fabricaCreditos.instance()
 		etiqueta.set_text(elementoActual.textoPorMostrar)
-		reproductorSonido.play(elementoActual.nombreSonido)
+		if reproductorSonido.get_sample_library().has_sample(elementoActual.nombreSonido):
+			reproductorSonido.play(elementoActual.nombreSonido)
 		add_child(etiqueta)
 	
 

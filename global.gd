@@ -90,26 +90,26 @@ ciamiento de la Vicerrectoría de Acción social de la Universidad de Costa Rica
 """
 
 var botones = [
-  Titulo.new("Óhua", "ohua", true)
+  Titulo.new("Óhua", "ohua", TipoTitulo.inicial)
   , Titulo.new("Díro isó", "diro iso")
   , [
     PartesAnimal.new("zbonte.png"
       , [
-        ParteAnimal.new("dabú cró", "bomcuo dabu cro", Vector2(0.248, 0.468))
-        , ParteAnimal.new("frác", "bomcuo frac", Vector2(0.39, 0.468))
+        ParteAnimal.new("bòmcuo dabú cró", "bomcuo dabu cro", Vector2(0.248, 0.468))
+        , ParteAnimal.new("bòmcuo frác", "bomcuo frac", Vector2(0.39, 0.468))
       ], Vector2(0.3, 0.3), Vector2(0.6, 0.6))
     , PartesAnimal.new("c uehuo.png"
       , [
-        ParteAnimal.new("cuóta", "c uehuo cuota", Vector2(0.667, 0.81))
+        ParteAnimal.new("c'uéhuo cuóta", "c uehuo cuota", Vector2(0.667, 0.81))
     ], Vector2(0.66, 0.66), Vector2(0.6, 0.6))
   ]
   , [
   # Peces. Hay que poner partes.
     DatosBoton.new("föcró/fòcro", "focro.png", ["focro", "focro2"], Vector2(0.3,0.4), Vector2(0.55, 0.55))
   , DatosBoton.new("qu'èhuän", "qu ehuan.png", "qu ehuan", Vector2(0.5, 0.4), Vector2(0.6, 0.6))
-  , DatosBoton.new("c'ascuò", "c ascuo.png", "c ascuo", Vector2(0.1, 0.1), Vector2(0.6, 0.6)) ## FALTA AUDIO
-  , DatosBoton.new("drémcuo", "dremcuo.png", "dremcuo", Vector2(0.1, 0.7), Vector2(0.7, 0.7)) ## FALTA AUDIO
-  , DatosBoton.new("drémcuohua", "dremcuohua.png", "dremcuohua", Vector2(0.7, 0.1), Vector2(0.5, 0.5))  ## FALTA AUDIO
+  , DatosBoton.new("c'ascuò", "c ascuo.png", "c ascuo", Vector2(0.1, 0.1), Vector2(0.6, 0.6))
+  , DatosBoton.new("drémcuo", "dremcuo.png", "dremcuo", Vector2(0.1, 0.7), Vector2(0.7, 0.7))
+  , DatosBoton.new("drémcuohua", "dremcuohua.png", "dremcuohua", Vector2(0.7, 0.1), Vector2(0.5, 0.5))
   , DatosBoton.new("zbòntë", "zbonte.png", "zbonte", Vector2(0.7, 0.7), Vector2(0.7, 0.7))
   ], [
   # Está 2 veces
@@ -118,26 +118,26 @@ var botones = [
   , DatosBoton.new("pímcuo", "pimcuo.png", "pimcuo", Vector2(0.1, 0.1), Vector2(0.65, 0.65))
   , DatosBoton.new("bógródo", "bogrodo.png", "bogrodo", Vector2(0.1, 0.7), Vector2(0.8, 0.8))
   , DatosBoton.new("́romdó", "romdo.png", "romdo", Vector2(0.7, 0.1), Vector2(0.72, 0.72))
-  , DatosBoton.new("m̲á", "ma.png", "ma", Vector2(0.7, 0.7), Vector2(0.8, 0.8))  ## FALTA AUDIO
+  , DatosBoton.new("m[u]̲á[/u]", "ma.png", "ma", Vector2(0.7, 0.7), Vector2(0.8, 0.8))
   ], [
   DatosBoton.new("shuóhuo", "shuohuo.png", "shuohuo", Vector2(0.4, 0.4), Vector2(0.9, 0.9))
   , DatosBoton.new("zhír", "zhir.png", "zhir", Vector2(0.7, 0.1), Vector2(0.9, 0.9))
   , DatosBoton.new("dióhuo", "diohuo.png", "diohuo", Vector2(0.1, 0.1), Vector2(0.95, 0.95))
-  , DatosBoton.new("́sró̈n", "sron.png", "sron", Vector2(0.1, 0.7), Vector2(0.75, 0.75))  ## FALTA AUDIO
+  , DatosBoton.new("śró̈n", "sron.png", "sron", Vector2(0.1, 0.7), Vector2(0.75, 0.75))
   # Repetido
   #, DatosBoton.new("bòmcuo", "bomcuo.png", "bomcuo", Vector2(0.7, 0.1), Vector2(0.65, 0.65))
   # Revisar si tiene otra tilde.
-  , DatosBoton.new("drú̈nbòmcuo", "drunbomcuo.png", "drunbomcuo", Vector2(0.7, 0.7), Vector2(0.75, 0.75)) ## FALTA AUDIO
+  , DatosBoton.new("drú̈nbòmcuo", "drunbomcuo.png", "drunbomcuo", Vector2(0.7, 0.7), Vector2(0.75, 0.75))
   ], [
-  DatosBoton.new("huor̈emcuó", "huoremcuo.png", "huoremcuo", Vector2(0.6, 0.1), Vector2(1, 1)) ## FALTA AUDIO
+  DatosBoton.new("huor̈emcuó", "huoremcuo.png", "huoremcuo", Vector2(0.6, 0.1), Vector2(1, 1))
   , DatosBoton.new("shíti cóhuo", "shiti cohuo.png", "shiti cohuo", Vector2(0.6, 0.65), Vector2(0.9, 0.9))
   , DatosBoton.new("c'ú", "c u.png", "c u", Vector2(0.15, 0.1), Vector2(0.8,0.8))
   , DatosBoton.new("c'uéhuo", "c uehuo.png", "c uehuo", Vector2(0.15, 0.6), Vector2(1, 1))
   ],
   Titulo.new("Bugúr/dugúr", "dugur")
  , [
-  DatosBoton.new("önna zhguó", "onna zhguo.png", "onna zhguo", Vector2(0.65, 0.6), Vector2(0.5,0.5))
-  , DatosBoton.new("sá", "sa.png", "sa", Vector2(0.65, 0.1), Vector2(0.7,0.7))
+  DatosBoton.new("ó̈nna zhguó", "onna zhguo.png", "onna zhguo", Vector2(0.65, 0.6), Vector2(0.5,0.5))
+  , DatosBoton.new("s[u]á[/u]", "sa.png", "sa", Vector2(0.65, 0.1), Vector2(0.7,0.7))
   , DatosBoton.new("c'áihuac", "c aihuac.png", "c aihuac", Vector2(0.15, 0.1), Vector2(0.7,0.7))
   , DatosBoton.new("śrígra zhguó", "srigra zhguo.png", "srigra zhguo", Vector2(0.15, 0.6), Vector2(0.5,0.5))
   ]
@@ -170,25 +170,25 @@ var botones = [
   , DatosBoton.new("iró̈n", "iron.png", "iron", Vector2(0.4, 0.4))
   # Revisar si pongo gúr̈eniá nada más.
   , DatosBoton.new("gúr̈eniá", "gurenia.png", "gurenia", Vector2(0.1, 0.1), Vector2(0.45, 0.45))
-  , DatosBoton.new("ó̈n", "on.png", "on", Vector2(0.1, 0.7)) ## FALTA AUDIO
+  , DatosBoton.new("ó̈n", "on.png", "on", Vector2(0.1, 0.7))
   # Ojo que tiene subrayado.
-  , DatosBoton.new("́r̲oshc̈̈ö/ár̲á", "roshco.png", "roshco", Vector2(0.7, 0.7), Vector2(0.55, 0.55))
+  , DatosBoton.new("́r[u]̲o[/u]shc̈̈ö/ár[u]̲á[/u]", "roshco.png", "roshco", Vector2(0.7, 0.7), Vector2(0.55, 0.55))
   , DatosBoton.new("gúr̈efün", "gurefun.png", "gurefun", Vector2(0.4, 0.1))
-  , DatosBoton.new("t̲agá", "taga.png", "taga", Vector2(0.7, 0.1))
+  , DatosBoton.new("t̲[u]a[/u]gá", "taga.png", "taga", Vector2(0.7, 0.1))
   ], [  
   DatosBoton.new("dö fú̈n", "do fun.png", "do fun", Vector2(0.3, 0.4), Vector2(0.63,0.63))
   , DatosBoton.new("c'rízuo", "c rizuo.png", "c rizuo", Vector2(0.5, 0.4), Vector2(0.65, 0.65))
   , DatosBoton.new("dünhuó", "dunhuo.png", "dunhuo", Vector2(0.1, 0.1), Vector2(0.5, 0.5))
-  , DatosBoton.new("́r̲oshcöhua", "roshcohua.png", "roshcohua2", Vector2(0.1, 0.65), Vector2(0.15, 0.15))
+  , DatosBoton.new("́r̲[u]o[/u]shcöhua", "roshcohua.png", "roshcohua2", Vector2(0.1, 0.65), Vector2(0.15, 0.15))
   , DatosBoton.new("púpcuo", "pupcuo.png", "pupcuo", Vector2(0.7, 0.1), Vector2(0.5, 0.5))
   , DatosBoton.new("́rurhuo", "rurhuo.png", "rurhuo", Vector2(0.7, 0.65), Vector2(0.12, 0.12))
   ], [
-  DatosBoton.new("t'úr̈ehuó", "t urehuo.png", "t urehuo", Vector2(0.3, 0.4), Vector2(0.6, 0.6)) ## FALTA AUDIO
-  , DatosBoton.new("c̲ózrá", "cozra.png", "cozra", Vector2(0.5, 0.4)) ## FALTA AUDIO
+  DatosBoton.new("t'úr̈ehuó", "t urehuo.png", "t urehuo", Vector2(0.3, 0.4), Vector2(0.6, 0.6))
+  , DatosBoton.new("c̲[u]ó[/u]zrá", "cozra.png", "cozra", Vector2(0.5, 0.4))
   , DatosBoton.new("cóshpa", "coshpa.png", "coshpa", Vector2(0.1, 0.1), Vector2(0.45, 0.45))
   , DatosBoton.new("shíc", "shic.png", "shic", Vector2(0.1, 0.7))
-  , DatosBoton.new("dárca", "darca.png", "darca", Vector2(0.7, 0.7)) ## FALTA AUDIO
-  , DatosBoton.new("́rá̈nsa", "ransa.png", "ransa", Vector2(0.75, 0.1), Vector2(0.55, 0.55)) ## FALTA AUDIO
+  , DatosBoton.new("dárca", "darca.png", "darca", Vector2(0.7, 0.7))
+  , DatosBoton.new("́rá̈nsa", "ransa.png", "ransa", Vector2(0.75, 0.1), Vector2(0.55, 0.55))
   ], [
   DatosBoton.new("shcuá̈n sí", "shcuan si.png", "shcuan si", Vector2(0.41, 0.4), Vector2(0.67, 0.67))
   , DatosBoton.new("d́rünquí̈ncui", "drunquincui.png", "drunquincui", Vector2(0.7, 0.7), Vector2(0.7, 0.7))
@@ -213,7 +213,7 @@ var botones = [
   , DatosBoton.new("orsèa", "orsea.png", "orsea", Vector2(0.4, 0.1))
   , DatosBoton.new("igurhuó", "igurhuo.png", "igurhuo", Vector2(0.7, 0.1), Vector2(0.42, 0.42))
   ],
-  Titulo.new("Óya dré t'oc é", "oya dre t oc e")
+  Titulo.new("[u]Ó[/u]ya dré t'oc é", "oya dre t oc e")
   , [
     PartesAnimal.new("gurinhuo.png"
       , [
@@ -237,10 +237,10 @@ var botones = [
 
   DatosBoton.new("bagá", "baga.png", "baga", Vector2(0.3, 0.4))
   , DatosBoton.new("shcuè", "shcue.png", "shcue", Vector2(0.5, 0.4))
-  , DatosBoton.new("di sár̲ón", "di saron.png", "di saron", Vector2(0.1, 0.1), Vector2(0.6, 0.6))
-  , DatosBoton.new("sár̲ón", "saron.png", "saron", Vector2(0.1, 0.7), Vector2(0.6, 0.6))
+  , DatosBoton.new("di sár[u]̲ó[/u]n", "di saron.png", "di saron", Vector2(0.1, 0.1), Vector2(0.6, 0.6))
+  , DatosBoton.new("sár̲[u]ó[/u]n", "saron.png", "saron", Vector2(0.1, 0.7), Vector2(0.6, 0.6))
   , DatosBoton.new("pö̈ngó", "pongo.png", "pongo", Vector2(0.7, 0.7), Vector2(0.83, 0.83))
-  , DatosBoton.new("zhg̲úr̲o", "zhguro.png", "zhguro", Vector2(0.7, 0.1))
+  , DatosBoton.new("zhg̲[u]u[/u]́r[u]̲o[/u]", "zhguro.png", "zhguro", Vector2(0.7, 0.1))
   ], [
   DatosBoton.new("c'ór scré̈n huága", "c or scren huaga.png", "c or scren huaga", Vector2(0.3, 0.4))
   , DatosBoton.new("śró idó̈n", "sro idon.png", "sro idon", Vector2(0.5, 0.4))
@@ -251,7 +251,7 @@ var botones = [
   , DatosBoton.new("c'úrí", "c uri.png", "c uri", Vector2(0.7, 0.1))
   ], [
   # Revisar pronunciación
-  DatosBoton.new("shcúré", "shcure.png", "shcure", Vector2(0.3, 0.4)) ## INCORRECTO
+  DatosBoton.new("shcúré", "shcure.png", "shcure", Vector2(0.3, 0.4))
   , DatosBoton.new("shrí", "shri.png", "shri", Vector2(0.5, 0.4))
   , DatosBoton.new("shtò", "shto.png", "shto", Vector2(0.1, 0.1))
   , DatosBoton.new("susbó", "susbo.png", "susbo", Vector2(0.1, 0.65))
@@ -263,9 +263,9 @@ var botones = [
   , DatosBoton.new("shcò", "shco.png", "shco", Vector2(0.1, 0.1))
   , DatosBoton.new("só", "so.png", "so", Vector2(0.1, 0.7), Vector2(0.4, 0.4))
   , DatosBoton.new("shúrco", "shurco.png", "shurco", Vector2(0.5, 0.4), Vector2(0.6, 0.6))
-  , DatosBoton.new("pè̈nǵra", "pengra.png", "pengra", Vector2(0.7, 0.1), Vector2(0.7, 0.7)) ## FALTA AUDIO
+  , DatosBoton.new("pè̈nǵra", "pengra.png", "pengra", Vector2(0.7, 0.1), Vector2(0.7, 0.7))
   ], [
-  DatosBoton.new("̲ashac", "ashac.png", "ashac", Vector2(0.3, 0.4), Vector2(0.75, 0.75))
+  DatosBoton.new("[u]̲a[/u]shac", "ashac.png", "ashac", Vector2(0.3, 0.4), Vector2(0.75, 0.75))
   , DatosBoton.new("racú̈n", "racun.png", "racun", Vector2(0.55, 0.4), Vector2(0.75, 0.75))
   , DatosBoton.new("óropgú", "oropgu.png", "oropgu", Vector2(0.1, 0.1), Vector2(0.8, 0.8))
   , DatosBoton.new("qu'iá", "qu ia.png", "qu ia", Vector2(0.1, 0.65), Vector2(0.5, 0.5))
@@ -275,8 +275,8 @@ var botones = [
   DatosBoton.new("yaigó", "yaigo.png", "yaigo", Vector2(0.73, 0.7), Vector2(0.6, 0.6))
   , DatosBoton.new("huonió", "huonio.png", "huonio", Vector2(0.55, 0.4))
   , DatosBoton.new("shúrí̈n", "shurin.png", "shurin", Vector2(0.1, 0.1), Vector2(0.5,0.5))
-  , DatosBoton.new("po shúrí̈n", "po shurin.png", "po shurin", Vector2(0.3, 0.35), Vector2(0.7, 0.7))
-  , DatosBoton.new("dobó̈nh̲u̲a", "dobonhua.png", "dobonhua", Vector2(0.1, 0.7), Vector2(0.5, 0.5))
+  , DatosBoton.new("pò shúrí̈n", "po shurin.png", "po shurin", Vector2(0.3, 0.35), Vector2(0.7, 0.7))
+  , DatosBoton.new("dobó̈nh[u]̲u̲a[/u]", "dobonhua.png", "dobonhua", Vector2(0.1, 0.7), Vector2(0.5, 0.5))
   , DatosBoton.new("c'ríro dobó̈n", "c riro dobon.png", "c riro dobon", Vector2(0.73, 0.1))
   ], [
   DatosBoton.new("böbrè̈n", "bobren.png", "bobren", Vector2(0.27, 0.4), Vector2(0.55, 0.55))
@@ -284,7 +284,7 @@ var botones = [
   , DatosBoton.new("dobó̈n täntá̈n/dobó̈n shricshrí", "dobon tantan.png", ["dobon tantan", "dobon shricshri"], Vector2(0.1, 0.1))
   , DatosBoton.new("shití", "shiti.png", "shiti", Vector2(0.1, 0.7))
   , DatosBoton.new("físcuo", "fiscuo.png", "fiscuo", Vector2(0.7, 0.7))
-  , DatosBoton.new("shurí̈nh̲u̲a", "shurinhua.png", "shurinhua", Vector2(0.7, 0.1))
+  , DatosBoton.new("shurí̈nh̲[u]u̲a[/u]", "shurinhua.png", "shurinhua", Vector2(0.7, 0.1))
   ], [
   DatosBoton.new("sögrá", "sogra.png", "sogra", Vector2(0.3, 0.4))
   , DatosBoton.new("cuomgrá/cuómcr̈en", "cuomgra.png", ["cuomgra", "cuomcren"], Vector2(0.5, 0.4))
@@ -292,7 +292,7 @@ var botones = [
   , DatosBoton.new("c'úrí", "c uri.png", "c uri", Vector2(0.1, 0.1))
   , DatosBoton.new("nepcuógra", "nepcuogra.png", "nepcuogra", Vector2(0.1, 0.7), Vector2(0.45,0.45))
   , DatosBoton.new("c'orcuó", "c orcuo.png", "c orcuo", Vector2(0.7, 0.7), Vector2(0.65, 0.65))
-  , DatosBoton.new("zg̲óh̲u̲o", "zgohuo.png", "zgohuo", Vector2(0.7, 0.1), Vector2(0.75, 0.75))
+  , DatosBoton.new("zg̲[u]ó[/u]h[u̲]u̲o[/u]", "zgohuo.png", "zgohuo", Vector2(0.7, 0.1), Vector2(0.75, 0.75))
   ], [
   DatosBoton.new("dié", "die.png", "die", Vector2(0.13, 0.13), Vector2(0.55, 0.55))
   , DatosBoton.new("t'í̈n", "t in.png", "t in", Vector2(0.3, 0.4), Vector2(0.6, 0.6))
