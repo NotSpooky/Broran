@@ -1,4 +1,6 @@
 extends Node
 	
 func set_text(texto):
-	self.get_child(0).get_child(0).set_bbcode("[center]" + texto + "[/center]")
+	var etiqueta = self.get_child(0).get_child(0)
+	assert(etiqueta.is_type("RichTextLabel"))
+	etiqueta.set_bbcode("[center]" + texto + "[/center]")

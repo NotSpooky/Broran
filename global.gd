@@ -161,7 +161,7 @@ var botones = [
     ], Vector2(0.2, 0.65), Vector2(0.3, 0.3))
     , PartesAnimal.new("zorcua.png"
       , [
-        ParteAnimal.new("zó̈n", "zorcua zon", Vector2(0.62, 0.5))
+        ParteAnimal.new("zòrcua zó̈n", "zorcua zon", Vector2(0.62, 0.5))
     ], Vector2(0.75, 0.75), Vector2(0.55, 0.55))
   ]
   , [
@@ -225,8 +225,8 @@ var botones = [
     ], Vector2(0.65, 0.2), Vector2(0.5, 0.5))
     , PartesAnimal.new("die.png"
       , [
-        ParteAnimal.new("sác", "die sac", Vector2(0.082, 0.63))
-        , ParteAnimal.new("shú", "die shu", Vector2(0.324, 0.8))
+        ParteAnimal.new("dié sác", "die sac", Vector2(0.082, 0.63))
+        , ParteAnimal.new("dié shú", "die shu", Vector2(0.324, 0.8))
     ], Vector2(0.24, 0.75), Vector2(0.5, 0.5))
     , PartesAnimal.new("cuomgra.png"
       , [
