@@ -218,7 +218,7 @@ var botones = [
   , [
     PartesAnimal.new("gurinhuo.png"
       , [
-        ParteAnimal.new("sápcuóta", "sapcuo 1", Vector2(0.175, 0.075))
+        ParteAnimal.new("sápcuóta", "sapcuota", Vector2(0.175, 0.075))
       ], Vector2(0.2, 0.32), Vector2(0.3, 0.3))
     , PartesAnimal.new("shurin.png"
       , [
@@ -231,7 +231,7 @@ var botones = [
     ], Vector2(0.24, 0.75), Vector2(0.5, 0.5))
     , PartesAnimal.new("cuomgra.png"
       , [
-        ParteAnimal.new("sápcuóta", "cuomgra sapcuo", Vector2(0.45, 0.84))
+        ParteAnimal.new("sápcuóta", "sapcuota", Vector2(0.45, 0.84))
     ], Vector2(0.7, 0.75), Vector2(0.4, 0.4))
   ]
   , [
