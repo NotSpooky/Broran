@@ -147,14 +147,16 @@ var botones = [
   , DatosBoton.new("dabará shuó", "dabara shuo.png", "dabara shuo", Vector2(0.65, 0.2), Vector2(0.5,0.5))
   , DatosBoton.new("dáró zhguó", "daro zhguo.png", "daro zhguo", Vector2(0.4, 0.65), Vector2(0.9,0.9))
   ],
-  Titulo.new("Dubúc sóga", "dubuc soga")
+  Titulo.new("Dubúc s[u]ó[/u]ga", "dubuc soga")
   , [
     PartesAnimal.new("c rizuo.png"
       , [
-        ParteAnimal.new("cohuo", "cohuo", Vector2(0.54, 0.175))
+        ParteAnimal.new("cohuó", "cohuo", Vector2(0.54, 0.175))
         , ParteAnimal.new("dregró/dré", "dre", Vector2(0.55, 0.33))
         , ParteAnimal.new("frác", "frac 2", Vector2(0.27, 0.35)) # Ojo es distinto el del pájaro a otros
-        , ParteAnimal.new("sogó", "sogo", Vector2(0.285, 0.165))
+        # Los botones no aceptan bbcode para ponerle el s[u]o[/u]gó.
+		# Modifiqué ō para que salga con subrayado
+	    , ParteAnimal.new("sōgó", "sogo", Vector2(0.285, 0.165))
       ], Vector2(0.45, 0.2), Vector2(0.6, 0.6))
     , PartesAnimal.new("guroc.png"
       , [
@@ -173,7 +175,7 @@ var botones = [
   , DatosBoton.new("gúr̈eniá", "gurenia.png", "gurenia", Vector2(0.1, 0.1), Vector2(0.45, 0.45))
   , DatosBoton.new("ó̈n", "on.png", "on", Vector2(0.1, 0.7))
   # Ojo que tiene subrayado.
-  , DatosBoton.new("́r[u]̲o[/u]shc̈̈ö/ár[u]̲á[/u]", "roshco.png", "roshco", Vector2(0.7, 0.7), Vector2(0.55, 0.55))
+  , DatosBoton.new("́r[u]̲o[/u]shcö/ár[u]̲á[/u]", "roshco.png", "roshco", Vector2(0.7, 0.7), Vector2(0.55, 0.55))
   , DatosBoton.new("gúr̈efün", "gurefun.png", "gurefun", Vector2(0.4, 0.1))
   , DatosBoton.new("t̲[u]a[/u]gá", "taga.png", "taga", Vector2(0.7, 0.1))
   ], [  
@@ -201,7 +203,7 @@ var botones = [
   , DatosBoton.new("òguc", "oguc.png", "oguc", Vector2(0.5, 0.4), Vector2(0.55, 0.55))
   # En el diccionario PDF son 2 aves
   , DatosBoton.new("c'́rác", "c rac.png", "c rac", Vector2(0.1, 0.1), Vector2(0.55, 0.55))
-  , DatosBoton.new("qu'ishcuän", "qu ishcuan.png", "qu ishcuan", Vector2(0.1, 0.7), Vector2(0.5, 0.5))
+  , DatosBoton.new("qu'íshcuän", "qu ishcuan.png", "qu ishcuan", Vector2(0.1, 0.7), Vector2(0.5, 0.5))
   , DatosBoton.new("c'̈oczhá̈n", "c oczhan.png", "c oczhan", Vector2(0.7, 0.7), Vector2(0.6, 0.6))
   , DatosBoton.new("zòrcua", "zorcua.png", "zorcua", Vector2(0.7, 0.1), Vector2(0.30,0.30))
   ], [
@@ -266,7 +268,7 @@ var botones = [
   , DatosBoton.new("shúrco", "shurco.png", "shurco", Vector2(0.5, 0.4), Vector2(0.6, 0.6))
   , DatosBoton.new("pè̈nǵra", "pengra.png", "pengra", Vector2(0.7, 0.1), Vector2(0.7, 0.7))
   ], [
-  DatosBoton.new("[u]̲a[/u]shac", "ashac.png", "ashac", Vector2(0.3, 0.4), Vector2(0.75, 0.75))
+  DatosBoton.new("[u]̲á[/u]shac", "ashac.png", "ashac", Vector2(0.3, 0.4), Vector2(0.75, 0.75))
   , DatosBoton.new("racú̈n", "racun.png", "racun", Vector2(0.55, 0.4), Vector2(0.75, 0.75))
   , DatosBoton.new("óropgú", "oropgu.png", "oropgu", Vector2(0.1, 0.1), Vector2(0.8, 0.8))
   , DatosBoton.new("qu'iá", "qu ia.png", "qu ia", Vector2(0.1, 0.65), Vector2(0.5, 0.5))
