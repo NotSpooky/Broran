@@ -59,7 +59,7 @@ func colocarOpciones():
 	etiquetaPuntaje.set_text(str(puntajes.puntaje))
 	reordenarAleatoriamente(opciones)
 	opcionCorrecta = opciones [0]
-	palabra.set_text(opcionCorrecta.textoPorMostrar)
+	palabra.set_bbcode("[center]" + opcionCorrecta.textoPorMostrar + "[/center]")
 	var nodosOpciones = [self.get_child(4), self.get_child(5), self.get_child(6)]
 	assert(nodosOpciones.size() == cantidadOpciones)
 	reordenarAleatoriamente(opciones) # Para que no sea la primer opción siempre la correcta
