@@ -243,6 +243,7 @@ var botones = [
   , DatosBoton.new("di sár[u]̲ó[/u]n", "di saron.png", "di saron", Vector2(0.1, 0.1), Vector2(0.6, 0.6))
   , DatosBoton.new("sár̲[u]ó[/u]n", "saron.png", "saron", Vector2(0.1, 0.7), Vector2(0.6, 0.6))
   , DatosBoton.new("pö̈ngó", "pongo.png", "pongo", Vector2(0.7, 0.7), Vector2(0.83, 0.83))
+  # A diferencia de la hormiga, acá parece funcionar bien el [u][/u] dos veces.
   , DatosBoton.new("zhg̲[u]u[/u]́r[u]̲o[/u]", "zhguro.png", "zhguro", Vector2(0.7, 0.1))
   ], [
   DatosBoton.new("c'ór scré̈n huága", "c or scren huaga.png", "c or scren huaga", Vector2(0.3, 0.4))
@@ -279,7 +280,7 @@ var botones = [
   , DatosBoton.new("huonió", "huonio.png", "huonio", Vector2(0.55, 0.4))
   , DatosBoton.new("shúrí̈n", "shurin.png", "shurin", Vector2(0.1, 0.1), Vector2(0.5,0.5))
   , DatosBoton.new("pò shúrí̈n", "po shurin.png", "po shurin", Vector2(0.3, 0.35), Vector2(0.7, 0.7))
-  , DatosBoton.new("dobó̈nh[u]̲u̲a[/u]", "dobonhua.png", "dobonhua", Vector2(0.1, 0.7), Vector2(0.5, 0.5))
+  , DatosBoton.new("dobó̈nh[u]̲u̲a[/u]", "dobonhua.png", "dobonhua", Vector2(0.1, 0.7), Vector2(0.8, 0.8))
   , DatosBoton.new("c'ríro dobó̈n", "c riro dobon.png", "c riro dobon", Vector2(0.73, 0.1))
   ], [
   DatosBoton.new("böbrè̈n", "bobren.png", "bobren", Vector2(0.27, 0.4), Vector2(0.55, 0.55))
@@ -292,10 +293,11 @@ var botones = [
   DatosBoton.new("sögrá", "sogra.png", "sogra", Vector2(0.3, 0.4))
   , DatosBoton.new("cuomgrá/cuómcr̈en", "cuomgra.png", ["cuomgra", "cuomcren"], Vector2(0.5, 0.4))
   # Hay 2 de este
-  , DatosBoton.new("c'úrí", "c uri.png", "c uri", Vector2(0.1, 0.1))
+  , DatosBoton.new("c'úrí", "c uri 2.png", "c uri", Vector2(0.1, 0.1))
   , DatosBoton.new("nepcuógra", "nepcuogra.png", "nepcuogra", Vector2(0.1, 0.7), Vector2(0.45,0.45))
   , DatosBoton.new("c'orcuó", "c orcuo.png", "c orcuo", Vector2(0.7, 0.7), Vector2(0.65, 0.65))
-  , DatosBoton.new("zg̲[u]ó[/u]h[u̲]u̲o[/u]", "zgohuo.png", "zgohuo", Vector2(0.7, 0.1), Vector2(0.75, 0.75))
+  #Un bug evita que hayan múltiples /u, el /s parece funcionar igual.
+  , DatosBoton.new("zg̲[s]ó[/s]h[u]u̲o[/u]", "zgohuo.png", "zgohuo", Vector2(0.7, 0.1), Vector2(0.75, 0.75))
   ], [
   DatosBoton.new("dié", "die.png", "die", Vector2(0.13, 0.13), Vector2(0.55, 0.55))
   , DatosBoton.new("t'í̈n", "t in.png", "t in", Vector2(0.3, 0.4), Vector2(0.6, 0.6))
