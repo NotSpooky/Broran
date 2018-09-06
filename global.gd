@@ -172,7 +172,7 @@ var botones = [
   DatosBoton.new("zrú̈n", "zrun.png", "zrun", Vector2(0.4, 0.7))
   , DatosBoton.new("iró̈n", "iron.png", "iron", Vector2(0.4, 0.4))
   # Revisar si pongo gúr̈eniá nada más.
-  , DatosBoton.new("gúr̈eniá", "gurenia.png", "gurenia", Vector2(0.1, 0.1), Vector2(0.45, 0.45))
+  , DatosBoton.new("gúr̈eniá/gúr̈eniáhua", "gurenia.png", "gurenia", Vector2(0.1, 0.1), Vector2(0.45, 0.45))
   , DatosBoton.new("ó̈n", "on.png", "on", Vector2(0.1, 0.7))
   # Ojo que tiene subrayado.
   , DatosBoton.new("́r[u]̲o[/u]shcö/ár[u]̲á[/u]", "roshco.png", "roshco", Vector2(0.7, 0.7), Vector2(0.55, 0.55))
@@ -184,7 +184,7 @@ var botones = [
   , DatosBoton.new("dünhuó", "dunhuo.png", "dunhuo", Vector2(0.1, 0.1), Vector2(0.5, 0.5))
   , DatosBoton.new("́r̲[u]o[/u]shcöhua", "roshcohua.png", "roshcohua2", Vector2(0.1, 0.65), Vector2(0.15, 0.15))
   , DatosBoton.new("púpcuo", "pupcuo.png", "pupcuo", Vector2(0.7, 0.1), Vector2(0.5, 0.5))
-  , DatosBoton.new("́rurhuo", "rurhuo.png", "rurhuo", Vector2(0.7, 0.65), Vector2(0.12, 0.12))
+  , DatosBoton.new("́rurh[u]uo[/u]", "rurhuo.png", "rurhuo", Vector2(0.7, 0.65), Vector2(0.12, 0.12))
   ], [
   DatosBoton.new("t'úr̈ehuó", "t urehuo.png", "t urehuo", Vector2(0.3, 0.4), Vector2(0.6, 0.6))
   , DatosBoton.new("c̲[u]ó[/u]zrá", "cozra.png", "cozra", Vector2(0.5, 0.4))
@@ -241,10 +241,10 @@ var botones = [
   DatosBoton.new("bagá", "baga.png", "baga", Vector2(0.3, 0.4))
   , DatosBoton.new("shcuè", "shcue.png", "shcue", Vector2(0.5, 0.4))
   , DatosBoton.new("di sár[u]̲ó[/u]n", "di saron.png", "di saron", Vector2(0.1, 0.1), Vector2(0.6, 0.6))
-  , DatosBoton.new("sár̲[u]ó[/u]n", "saron.png", "saron", Vector2(0.1, 0.7), Vector2(0.6, 0.6))
+  , DatosBoton.new("sár̲ón", "saron.png", "saron", Vector2(0.1, 0.7), Vector2(0.6, 0.6))
   , DatosBoton.new("pö̈ngó", "pongo.png", "pongo", Vector2(0.7, 0.7), Vector2(0.83, 0.83))
   # A diferencia de la hormiga, acá parece funcionar bien el [u][/u] dos veces.
-  , DatosBoton.new("zhg̲[u]u[/u]́r[u]̲o[/u]", "zhguro.png", "zhguro", Vector2(0.7, 0.1))
+  , DatosBoton.new("zhg̲[u]u[/u]́r[u]ó[/u]", "zhguro.png", "zhguro", Vector2(0.7, 0.1))
   ], [
   DatosBoton.new("c'ór scré̈n huága", "c or scren huaga.png", "c or scren huaga", Vector2(0.3, 0.4))
   , DatosBoton.new("śró idó̈n", "sro idon.png", "sro idon", Vector2(0.5, 0.4))
