@@ -241,7 +241,7 @@ var botones = [
   DatosBoton.new("bagá", "baga.png", "baga", Vector2(0.3, 0.4))
   , DatosBoton.new("shcuè", "shcue.png", "shcue", Vector2(0.5, 0.4))
   , DatosBoton.new("di sár[u]̲ó[/u]n", "di saron.png", "di saron", Vector2(0.1, 0.1), Vector2(0.6, 0.6))
-  , DatosBoton.new("sár̲ón", "saron.png", "saron", Vector2(0.1, 0.7), Vector2(0.6, 0.6))
+  , DatosBoton.new("sár̲[u]ó[/u]n", "saron.png", "saron", Vector2(0.1, 0.7), Vector2(0.6, 0.6))
   , DatosBoton.new("pö̈ngó", "pongo.png", "pongo", Vector2(0.7, 0.7), Vector2(0.83, 0.83))
   # A diferencia de la hormiga, acá parece funcionar bien el [u][/u] dos veces.
   , DatosBoton.new("zhg̲[u]u[/u]́r[u]ó[/u]", "zhguro.png", "zhguro", Vector2(0.7, 0.1))
